@@ -1,0 +1,14 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pandas>=2.1
+numpy>=1.26
+scikit-learn>=1.4
+scipy>=1.11
+SQLAlchemy>=2.0
+pyarrow>=14
+rapidfuzz>=3.5
+Unidecode>=1.3
+python-dotenv>=1.0
+pytest>=8
+httpx>=0.26
+playwright>=1.40

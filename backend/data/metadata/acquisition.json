@@ -1,0 +1,439 @@
+{
+  "source_id": "statsbomb_open_data",
+  "scope": "balanced",
+  "retrieved_at": "2026-09-15T17:10:25.929297+00:00",
+  "finished_at": "2026-09-15T17:12:08.319525+00:00",
+  "upstream_commit": null,
+  "competition_seasons": [
+    {
+      "competition_id": 9,
+      "season_id": 281,
+      "competition_name": "1. Bundesliga",
+      "season_name": "2023/2024",
+      "gender": "male",
+      "country": "Germany"
+    },
+    {
+      "competition_id": 9,
+      "season_id": 27,
+      "competition_name": "1. Bundesliga",
+      "season_name": "2015/2016",
+      "gender": "male",
+      "country": "Germany"
+    },
+    {
+      "competition_id": 1267,
+      "season_id": 107,
+      "competition_name": "African Cup of Nations",
+      "season_name": "2023",
+      "gender": "male",
+      "country": "Africa"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 4,
+      "competition_name": "Champions League",
+      "season_name": "2018/2019",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 1,
+      "competition_name": "Champions League",
+      "season_name": "2017/2018",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 2,
+      "competition_name": "Champions League",
+      "season_name": "2016/2017",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 27,
+      "competition_name": "Champions League",
+      "season_name": "2015/2016",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 26,
+      "competition_name": "Champions League",
+      "season_name": "2014/2015",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 25,
+      "competition_name": "Champions League",
+      "season_name": "2013/2014",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 24,
+      "competition_name": "Champions League",
+      "season_name": "2012/2013",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 23,
+      "competition_name": "Champions League",
+      "season_name": "2011/2012",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 22,
+      "competition_name": "Champions League",
+      "season_name": "2010/2011",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 21,
+      "competition_name": "Champions League",
+      "season_name": "2009/2010",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 41,
+      "competition_name": "Champions League",
+      "season_name": "2008/2009",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 39,
+      "competition_name": "Champions League",
+      "season_name": "2006/2007",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 37,
+      "competition_name": "Champions League",
+      "season_name": "2004/2005",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 44,
+      "competition_name": "Champions League",
+      "season_name": "2003/2004",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 76,
+      "competition_name": "Champions League",
+      "season_name": "1999/2000",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 277,
+      "competition_name": "Champions League",
+      "season_name": "1972/1973",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 71,
+      "competition_name": "Champions League",
+      "season_name": "1971/1972",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 16,
+      "season_id": 276,
+      "competition_name": "Champions League",
+      "season_name": "1970/1971",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 223,
+      "season_id": 282,
+      "competition_name": "Copa America",
+      "season_name": "2024",
+      "gender": "male",
+      "country": "South America"
+    },
+    {
+      "competition_id": 43,
+      "season_id": 106,
+      "competition_name": "FIFA World Cup",
+      "season_name": "2022",
+      "gender": "male",
+      "country": "International"
+    },
+    {
+      "competition_id": 43,
+      "season_id": 3,
+      "competition_name": "FIFA World Cup",
+      "season_name": "2018",
+      "gender": "male",
+      "country": "International"
+    },
+    {
+      "competition_id": 1238,
+      "season_id": 108,
+      "competition_name": "Indian Super league",
+      "season_name": "2021/2022",
+      "gender": "male",
+      "country": "India"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 90,
+      "competition_name": "La Liga",
+      "season_name": "2020/2021",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 42,
+      "competition_name": "La Liga",
+      "season_name": "2019/2020",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 4,
+      "competition_name": "La Liga",
+      "season_name": "2018/2019",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 1,
+      "competition_name": "La Liga",
+      "season_name": "2017/2018",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 2,
+      "competition_name": "La Liga",
+      "season_name": "2016/2017",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 27,
+      "competition_name": "La Liga",
+      "season_name": "2015/2016",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 26,
+      "competition_name": "La Liga",
+      "season_name": "2014/2015",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 25,
+      "competition_name": "La Liga",
+      "season_name": "2013/2014",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 24,
+      "competition_name": "La Liga",
+      "season_name": "2012/2013",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 23,
+      "competition_name": "La Liga",
+      "season_name": "2011/2012",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 22,
+      "competition_name": "La Liga",
+      "season_name": "2010/2011",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 21,
+      "competition_name": "La Liga",
+      "season_name": "2009/2010",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 41,
+      "competition_name": "La Liga",
+      "season_name": "2008/2009",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 40,
+      "competition_name": "La Liga",
+      "season_name": "2007/2008",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 39,
+      "competition_name": "La Liga",
+      "season_name": "2006/2007",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 38,
+      "competition_name": "La Liga",
+      "season_name": "2005/2006",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 37,
+      "competition_name": "La Liga",
+      "season_name": "2004/2005",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 11,
+      "season_id": 278,
+      "competition_name": "La Liga",
+      "season_name": "1973/1974",
+      "gender": "male",
+      "country": "Spain"
+    },
+    {
+      "competition_id": 7,
+      "season_id": 235,
+      "competition_name": "Ligue 1",
+      "season_name": "2022/2023",
+      "gender": "male",
+      "country": "France"
+    },
+    {
+      "competition_id": 7,
+      "season_id": 108,
+      "competition_name": "Ligue 1",
+      "season_name": "2021/2022",
+      "gender": "male",
+      "country": "France"
+    },
+    {
+      "competition_id": 7,
+      "season_id": 27,
+      "competition_name": "Ligue 1",
+      "season_name": "2015/2016",
+      "gender": "male",
+      "country": "France"
+    },
+    {
+      "competition_id": 44,
+      "season_id": 107,
+      "competition_name": "Major League Soccer",
+      "season_name": "2023",
+      "gender": "male",
+      "country": "United States of America"
+    },
+    {
+      "competition_id": 2,
+      "season_id": 27,
+      "competition_name": "Premier League",
+      "season_name": "2015/2016",
+      "gender": "male",
+      "country": "England"
+    },
+    {
+      "competition_id": 2,
+      "season_id": 44,
+      "competition_name": "Premier League",
+      "season_name": "2003/2004",
+      "gender": "male",
+      "country": "England"
+    },
+    {
+      "competition_id": 12,
+      "season_id": 27,
+      "competition_name": "Serie A",
+      "season_name": "2015/2016",
+      "gender": "male",
+      "country": "Italy"
+    },
+    {
+      "competition_id": 12,
+      "season_id": 86,
+      "competition_name": "Serie A",
+      "season_name": "1986/1987",
+      "gender": "male",
+      "country": "Italy"
+    },
+    {
+      "competition_id": 55,
+      "season_id": 282,
+      "competition_name": "UEFA Euro",
+      "season_name": "2024",
+      "gender": "male",
+      "country": "Europe"
+    },
+    {
+      "competition_id": 55,
+      "season_id": 43,
+      "competition_name": "UEFA Euro",
+      "season_name": "2020",
+      "gender": "male",
+      "country": "Europe"
+    }
+  ],
+  "matches": 2622,
+  "files_downloaded": 2,
+  "files_from_cache": 5242,
+  "failures": [],
+  "raw_dir": "D:\\claude\\Aussie\\Claude outputs\\football-time-machine\\football-time-machine\\backend\\data\\raw\\statsbomb",
+  "raw_sha256_manifest": "D:\\claude\\Aussie\\Claude outputs\\football-time-machine\\football-time-machine\\backend\\data\\metadata\\raw_manifest.json"
+}

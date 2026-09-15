@@ -1,0 +1,16 @@
+{
+  "dataset_version": "1.0.0",
+  "built_at": "2026-09-15T17:12:53.538390+00:00",
+  "scope": "balanced",
+  "source_commit": null,
+  "retrieved_at": "2026-09-15T17:10:25.929297+00:00",
+  "content_hash": "9f21fc9a786dcff0",
+  "rows": {
+    "player_match": 74253,
+    "team_match": 5244,
+    "player_season": 13445,
+    "team_season": 53,
+    "players": 7015,
+    "competition_seasons": 53
+  }
+}

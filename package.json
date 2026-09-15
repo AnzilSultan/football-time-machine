@@ -1,0 +1,15 @@
+{
+  "name": "football-time-machine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Understanding footballers, playing styles and football eras with machine learning.",
+  "scripts": {
+    "setup": "python setup.py",
+    "start": "python start.py",
+    "dev": "python start.py --dev",
+    "build": "npm --prefix frontend run build",
+    "test": "python -m pytest backend/tests -q",
+    "test:browser": "python backend/tests/browser_check.py"
+  },
+  "license": "MIT"
+}

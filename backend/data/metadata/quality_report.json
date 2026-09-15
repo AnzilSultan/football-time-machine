@@ -1,0 +1,581 @@
+{
+  "generated_at": "2026-09-15T17:12:53.504688+00:00",
+  "dataset_version": "1.0.0",
+  "totals": {
+    "players": 7015,
+    "player_seasons": 13445,
+    "qualifying_player_seasons": 2929,
+    "player_matches": 74253,
+    "matches": 2622,
+    "competitions": 12,
+    "competition_seasons": 53,
+    "seasons": 32,
+    "teams": 237,
+    "first_season": 1970,
+    "last_season": 2024
+  },
+  "missing_values": {
+    "total_cells_null": 21851,
+    "by_metric": {
+      "goals_per90": 10,
+      "non_penalty_goals_per90": 10,
+      "shots_per90": 10,
+      "shots_on_target_per90": 10,
+      "xg_per90": 10,
+      "npxg_per90": 10,
+      "assists_per90": 10,
+      "xa_per90": 10,
+      "key_passes_per90": 10,
+      "passes_per90": 10,
+      "passes_completed_per90": 10,
+      "progressive_passes_per90": 10,
+      "passes_into_final_third_per90": 10,
+      "passes_into_box_per90": 10,
+      "crosses_per90": 10,
+      "long_balls_per90": 10,
+      "passes_received_per90": 10,
+      "carries_per90": 10,
+      "progressive_carries_per90": 10,
+      "carry_distance_per90": 10,
+      "carries_into_final_third_per90": 10,
+      "carries_into_box_per90": 10,
+      "dribbles_per90": 10,
+      "dribbles_completed_per90": 10,
+      "dribbled_past_per90": 10,
+      "touches_per90": 10,
+      "touches_attacking_third_per90": 10,
+      "touches_penalty_area_per90": 10,
+      "touches_defensive_third_per90": 10,
+      "tackles_per90": 10,
+      "tackles_won_per90": 10,
+      "interceptions_per90": 10,
+      "blocks_per90": 10,
+      "clearances_per90": 10,
+      "ball_recoveries_per90": 10,
+      "pressures_per90": 10,
+      "counterpressures_per90": 10,
+      "aerials_won_per90": 10,
+      "aerials_lost_per90": 10,
+      "fouls_committed_per90": 10,
+      "fouls_won_per90": 10,
+      "dispossessed_per90": 10,
+      "miscontrols_per90": 10,
+      "pass_completion": 103,
+      "dribble_success": 4699,
+      "aerial_win_rate": 3174,
+      "age": 13445
+    },
+    "note": "Nulls are genuine gaps (e.g. age is not published in StatsBomb open data; rates are null when the denominator is zero). They are never imputed."
+  },
+  "duplicates_removed": {
+    "player_match": 0,
+    "team_match": 0
+  },
+  "invalid_records_removed": {
+    "player_match": 0,
+    "team_match": 0
+  },
+  "validation": {
+    "player_match": {
+      "rows_in": 74253,
+      "rows_out": 74253,
+      "duplicates_removed": 0,
+      "invalid_removed": 0,
+      "issues": [
+        {
+          "kind": "missing_position",
+          "count": 31,
+          "detail": "players with no recognised position label"
+        }
+      ]
+    },
+    "team_match": {
+      "rows_in": 5244,
+      "rows_out": 5244,
+      "duplicates_removed": 0,
+      "invalid_removed": 0,
+      "issues": [
+        {
+          "kind": "event_goals_vs_official_score_mismatch",
+          "count": 56,
+          "detail": "official score used for team goals; event-derived count kept as goals_from_events"
+        }
+      ]
+    }
+  },
+  "parse_errors": [],
+  "coverage_by_season": [
+    {
+      "season_key": "1. Bundesliga 2015/16",
+      "player_seasons": 346,
+      "qualifying": 17,
+      "mean_coverage": 37.6,
+      "matches": 33
+    },
+    {
+      "season_key": "1. Bundesliga 2023/24",
+      "player_seasons": 373,
+      "qualifying": 16,
+      "mean_coverage": 37.2,
+      "matches": 33
+    },
+    {
+      "season_key": "African Cup of Nations 2023",
+      "player_seasons": 512,
+      "qualifying": 175,
+      "mean_coverage": 39.3,
+      "matches": 7
+    },
+    {
+      "season_key": "Champions League 1970/71",
+      "player_seasons": 24,
+      "qualifying": 0,
+      "mean_coverage": 33.3,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 1971/72",
+      "player_seasons": 24,
+      "qualifying": 0,
+      "mean_coverage": 33.3,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 1972/73",
+      "player_seasons": 24,
+      "qualifying": 0,
+      "mean_coverage": 33.3,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 1999/00",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 33.0,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2003/04",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 33.0,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2004/05",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 33.7,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2006/07",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 33.0,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2008/09",
+      "player_seasons": 27,
+      "qualifying": 0,
+      "mean_coverage": 33.1,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2009/10",
+      "player_seasons": 27,
+      "qualifying": 0,
+      "mean_coverage": 18.1,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2010/11",
+      "player_seasons": 27,
+      "qualifying": 0,
+      "mean_coverage": 18.1,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2011/12",
+      "player_seasons": 26,
+      "qualifying": 0,
+      "mean_coverage": 18.8,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2012/13",
+      "player_seasons": 26,
+      "qualifying": 0,
+      "mean_coverage": 18.2,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2013/14",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 18.7,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2014/15",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 18.1,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2015/16",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 18.7,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2016/17",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 18.0,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2017/18",
+      "player_seasons": 27,
+      "qualifying": 0,
+      "mean_coverage": 33.1,
+      "matches": 1
+    },
+    {
+      "season_key": "Champions League 2018/19",
+      "player_seasons": 28,
+      "qualifying": 0,
+      "mean_coverage": 33.0,
+      "matches": 1
+    },
+    {
+      "season_key": "Copa America 2024",
+      "player_seasons": 339,
+      "qualifying": 110,
+      "mean_coverage": 38.5,
+      "matches": 6
+    },
+    {
+      "season_key": "FIFA World Cup 2018",
+      "player_seasons": 604,
+      "qualifying": 240,
+      "mean_coverage": 24.2,
+      "matches": 7
+    },
+    {
+      "season_key": "FIFA World Cup 2022",
+      "player_seasons": 681,
+      "qualifying": 231,
+      "mean_coverage": 38.6,
+      "matches": 7
+    },
+    {
+      "season_key": "Indian Super league 2021/22",
+      "player_seasons": 288,
+      "qualifying": 131,
+      "mean_coverage": 65.0,
+      "matches": 23
+    },
+    {
+      "season_key": "La Liga 1973/74",
+      "player_seasons": 24,
+      "qualifying": 0,
+      "mean_coverage": 33.3,
+      "matches": 1
+    },
+    {
+      "season_key": "La Liga 2004/05",
+      "player_seasons": 113,
+      "qualifying": 0,
+      "mean_coverage": 35.2,
+      "matches": 7
+    },
+    {
+      "season_key": "La Liga 2005/06",
+      "player_seasons": 240,
+      "qualifying": 10,
+      "mean_coverage": 36.0,
+      "matches": 17
+    },
+    {
+      "season_key": "La Liga 2006/07",
+      "player_seasons": 314,
+      "qualifying": 13,
+      "mean_coverage": 36.7,
+      "matches": 26
+    },
+    {
+      "season_key": "La Liga 2007/08",
+      "player_seasons": 337,
+      "qualifying": 15,
+      "mean_coverage": 36.6,
+      "matches": 27
+    },
+    {
+      "season_key": "La Liga 2008/09",
+      "player_seasons": 338,
+      "qualifying": 14,
+      "mean_coverage": 37.1,
+      "matches": 31
+    },
+    {
+      "season_key": "La Liga 2009/10",
+      "player_seasons": 362,
+      "qualifying": 16,
+      "mean_coverage": 37.4,
+      "matches": 35
+    },
+    {
+      "season_key": "La Liga 2010/11",
+      "player_seasons": 355,
+      "qualifying": 14,
+      "mean_coverage": 37.1,
+      "matches": 33
+    },
+    {
+      "season_key": "La Liga 2011/12",
+      "player_seasons": 383,
+      "qualifying": 18,
+      "mean_coverage": 37.4,
+      "matches": 37
+    },
+    {
+      "season_key": "La Liga 2012/13",
+      "player_seasons": 354,
+      "qualifying": 18,
+      "mean_coverage": 37.2,
+      "matches": 32
+    },
+    {
+      "season_key": "La Liga 2013/14",
+      "player_seasons": 351,
+      "qualifying": 14,
+      "mean_coverage": 37.0,
+      "matches": 31
+    },
+    {
+      "season_key": "La Liga 2014/15",
+      "player_seasons": 373,
+      "qualifying": 17,
+      "mean_coverage": 37.6,
+      "matches": 38
+    },
+    {
+      "season_key": "La Liga 2015/16",
+      "player_seasons": 540,
+      "qualifying": 344,
+      "mean_coverage": 77.1,
+      "matches": 38
+    },
+    {
+      "season_key": "La Liga 2016/17",
+      "player_seasons": 360,
+      "qualifying": 16,
+      "mean_coverage": 37.3,
+      "matches": 34
+    },
+    {
+      "season_key": "La Liga 2017/18",
+      "player_seasons": 365,
+      "qualifying": 14,
+      "mean_coverage": 37.4,
+      "matches": 36
+    },
+    {
+      "season_key": "La Liga 2018/19",
+      "player_seasons": 362,
+      "qualifying": 15,
+      "mean_coverage": 37.1,
+      "matches": 34
+    },
+    {
+      "season_key": "La Liga 2019/20",
+      "player_seasons": 370,
+      "qualifying": 17,
+      "mean_coverage": 37.0,
+      "matches": 33
+    },
+    {
+      "season_key": "La Liga 2020/21",
+      "player_seasons": 383,
+      "qualifying": 15,
+      "mean_coverage": 37.2,
+      "matches": 35
+    },
+    {
+      "season_key": "Ligue 1 2015/16",
+      "player_seasons": 574,
+      "qualifying": 342,
+      "mean_coverage": 74.7,
+      "matches": 38
+    },
+    {
+      "season_key": "Ligue 1 2021/22",
+      "player_seasons": 328,
+      "qualifying": 14,
+      "mean_coverage": 36.8,
+      "matches": 26
+    },
+    {
+      "season_key": "Ligue 1 2022/23",
+      "player_seasons": 387,
+      "qualifying": 14,
+      "mean_coverage": 36.7,
+      "matches": 32
+    },
+    {
+      "season_key": "Major League Soccer 2023",
+      "player_seasons": 118,
+      "qualifying": 0,
+      "mean_coverage": 34.5,
+      "matches": 6
+    },
+    {
+      "season_key": "Premier League 2003/04",
+      "player_seasons": 371,
+      "qualifying": 14,
+      "mean_coverage": 37.2,
+      "matches": 38
+    },
+    {
+      "season_key": "Premier League 2015/16",
+      "player_seasons": 550,
+      "qualifying": 327,
+      "mean_coverage": 75.0,
+      "matches": 38
+    },
+    {
+      "season_key": "Serie A 1986/87",
+      "player_seasons": 26,
+      "qualifying": 0,
+      "mean_coverage": 33.1,
+      "matches": 1
+    },
+    {
+      "season_key": "Serie A 2015/16",
+      "player_seasons": 552,
+      "qualifying": 343,
+      "mean_coverage": 76.2,
+      "matches": 38
+    },
+    {
+      "season_key": "UEFA Euro 2020",
+      "player_seasons": 490,
+      "qualifying": 198,
+      "mean_coverage": 39.5,
+      "matches": 7
+    },
+    {
+      "season_key": "UEFA Euro 2024",
+      "player_seasons": 498,
+      "qualifying": 187,
+      "mean_coverage": 39.2,
+      "matches": 7
+    }
+  ],
+  "coverage_by_metric": {
+    "goals_per90": 99.9,
+    "non_penalty_goals_per90": 99.9,
+    "shots_per90": 99.9,
+    "shots_on_target_per90": 99.9,
+    "xg_per90": 99.9,
+    "npxg_per90": 99.9,
+    "assists_per90": 99.9,
+    "xa_per90": 99.9,
+    "key_passes_per90": 99.9,
+    "passes_per90": 99.9,
+    "passes_completed_per90": 99.9,
+    "progressive_passes_per90": 99.9,
+    "passes_into_final_third_per90": 99.9,
+    "passes_into_box_per90": 99.9,
+    "crosses_per90": 99.9,
+    "long_balls_per90": 99.9,
+    "passes_received_per90": 99.9,
+    "carries_per90": 99.9,
+    "progressive_carries_per90": 99.9,
+    "carry_distance_per90": 99.9,
+    "carries_into_final_third_per90": 99.9,
+    "carries_into_box_per90": 99.9,
+    "dribbles_per90": 99.9,
+    "dribbles_completed_per90": 99.9,
+    "dribbled_past_per90": 99.9,
+    "touches_per90": 99.9,
+    "touches_attacking_third_per90": 99.9,
+    "touches_penalty_area_per90": 99.9,
+    "touches_defensive_third_per90": 99.9,
+    "tackles_per90": 99.9,
+    "tackles_won_per90": 99.9,
+    "interceptions_per90": 99.9,
+    "blocks_per90": 99.9,
+    "clearances_per90": 99.9,
+    "ball_recoveries_per90": 99.9,
+    "pressures_per90": 99.9,
+    "counterpressures_per90": 99.9,
+    "aerials_won_per90": 99.9,
+    "aerials_lost_per90": 99.9,
+    "fouls_committed_per90": 99.9,
+    "fouls_won_per90": 99.9,
+    "dispossessed_per90": 99.9,
+    "miscontrols_per90": 99.9,
+    "pass_completion": 99.2,
+    "dribble_success": 65.1,
+    "aerial_win_rate": 76.4,
+    "age": 0.0
+  },
+  "sample_types": {
+    "single_team_centric": 24,
+    "tournament": 24,
+    "full_season": 4,
+    "partial_season": 1
+  },
+  "metric_definitions": {
+    "goals": "Shot events with outcome Goal (own goals excluded).",
+    "non_penalty_goals": "Goals from shots whose type is not Penalty.",
+    "shots": "All Shot events, including penalties.",
+    "shots_on_target": "Shots with outcome Goal, Saved or Saved To Post.",
+    "xg": "Sum of statsbomb_xg over shots.",
+    "npxg": "Sum of statsbomb_xg over non-penalty shots.",
+    "assists": "Passes flagged goal_assist.",
+    "xa": "Sum of the xG of shots directly assisted by the player's passes (via key_pass_id).",
+    "key_passes": "Passes flagged shot_assist (passes leading directly to a shot).",
+    "passes": "Pass events attempted (all types incl. set pieces).",
+    "passes_completed": "Pass events with no outcome (StatsBomb records outcome only when unsuccessful).",
+    "progressive_passes": "Completed open-play passes that move the ball at least 10 yards toward goal, excluding those that start in the team's own 40% unless they end in the final third.",
+    "passes_into_final_third": "Completed passes that start outside and end inside the attacking third (x >= 80).",
+    "passes_into_box": "Completed passes that end inside the penalty area.",
+    "crosses": "Passes flagged cross.",
+    "long_balls": "Passes of 30+ yards.",
+    "passes_received": "Ball Receipt events without a failed outcome.",
+    "carries": "Carry events.",
+    "progressive_carries": "Carries that move the ball at least 10 yards toward goal (not from own 40%) or that enter the penalty area.",
+    "carry_distance": "Sum of forward distance (yards) gained by carries.",
+    "dribbles": "Dribble events attempted (take-ons).",
+    "dribbles_completed": "Dribble events with outcome Complete.",
+    "touches": "Passes + completed ball receipts + shots + dribbles + clearances + interceptions + ball recoveries + blocks + miscontrols (carries excluded to avoid double counting).",
+    "touches_attacking_third": "Touches located at x >= 80 (attacking third).",
+    "touches_penalty_area": "Touches located inside the opposition penalty area.",
+    "touches_defensive_third": "Touches located at x <= 40.",
+    "tackles": "Duel events of type Tackle.",
+    "tackles_won": "Tackle duels with a winning outcome.",
+    "interceptions": "Interception events with a successful outcome (Won / Success variants).",
+    "blocks": "Block events.",
+    "clearances": "Clearance events.",
+    "ball_recoveries": "Ball Recovery events without recovery_failure.",
+    "pressures": "Pressure events.",
+    "counterpressures": "Pressure events flagged counterpress.",
+    "aerials_won": "Events flagged aerial_won (pass, shot, clearance, miscontrol).",
+    "aerials_lost": "Duel events of type Aerial Lost.",
+    "fouls_committed": "Foul Committed events.",
+    "fouls_won": "Foul Won events.",
+    "yellow_cards": "Yellow Card / Second Yellow from fouls or bad behaviour.",
+    "red_cards": "Red Card / Second Yellow from fouls or bad behaviour.",
+    "dispossessed": "Dispossessed events.",
+    "miscontrols": "Miscontrol events.",
+    "possession_share": "Team share of on-ball possession time within the match (from possession sequences).",
+    "minutes": "Minutes on the pitch from lineup position intervals, bounded by the actual match length."
+  }
+}

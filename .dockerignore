@@ -1,0 +1,11 @@
+backend/data/raw/
+backend/data/cache/
+backend/data/processed/player_match.parquet
+backend/data/processed/team_match.parquet
+frontend/node_modules/
+frontend/dist/
+**/__pycache__/
+**/.pytest_cache/
+.git/
+.env
+*.zip

@@ -1,0 +1,5031 @@
+{
+  "model_version": "1.0.0",
+  "feature_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "dataset_content_hash": "9f21fc9a786dcff0",
+  "source_commit": null,
+  "random_seed": 42,
+  "trained_at": "2026-09-15T17:13:02.237159+00:00",
+  "training_seconds": 8.7,
+  "population": {
+    "player_seasons": 2661,
+    "players": 2035,
+    "all_player_seasons": 13445,
+    "qualifying_by_minutes": 2929,
+    "excluded_goalkeepers": 268,
+    "rule": "outfield, minutes >= 900 (league) or >= 270 (tournament), complete feature vector"
+  },
+  "features": {
+    "model_features": [
+      "aerials_lost_per90",
+      "aerials_won_per90",
+      "assists_per90",
+      "ball_recoveries_per90",
+      "blocks_per90",
+      "carries_into_box_per90",
+      "carries_into_final_third_per90",
+      "carries_per90",
+      "carry_distance_per90",
+      "clearances_per90",
+      "counterpressures_per90",
+      "dribbles_completed_per90",
+      "dribbles_per90",
+      "fouls_won_per90",
+      "interceptions_per90",
+      "key_passes_per90",
+      "long_balls_per90",
+      "non_penalty_goals_per90",
+      "npxg_per90",
+      "pass_completion",
+      "passes_completed_per90",
+      "passes_into_box_per90",
+      "passes_into_final_third_per90",
+      "passes_per90",
+      "passes_received_per90",
+      "pressures_per90",
+      "progressive_carries_per90",
+      "progressive_passes_per90",
+      "shots_on_target_per90",
+      "shots_per90",
+      "tackles_per90",
+      "touches_attacking_third_per90",
+      "touches_penalty_area_per90",
+      "touches_per90",
+      "xa_per90"
+    ],
+    "n_features": 35,
+    "dna_dimensions": {
+      "finishing": [
+        "npxg_per90",
+        "non_penalty_goals_per90",
+        "shots_per90",
+        "shots_on_target_per90"
+      ],
+      "chance_creation": [
+        "xa_per90",
+        "key_passes_per90",
+        "assists_per90",
+        "passes_into_box_per90"
+      ],
+      "ball_progression": [
+        "progressive_passes_per90",
+        "progressive_carries_per90",
+        "passes_into_final_third_per90",
+        "carries_into_final_third_per90"
+      ],
+      "passing": [
+        "passes_per90",
+        "passes_completed_per90",
+        "pass_completion",
+        "long_balls_per90"
+      ],
+      "carrying": [
+        "carries_per90",
+        "carry_distance_per90",
+        "carries_into_box_per90"
+      ],
+      "dribbling": [
+        "dribbles_per90",
+        "dribbles_completed_per90",
+        "fouls_won_per90"
+      ],
+      "possession_involvement": [
+        "touches_per90",
+        "passes_received_per90",
+        "touches_attacking_third_per90",
+        "touches_penalty_area_per90"
+      ],
+      "defensive_activity": [
+        "tackles_per90",
+        "interceptions_per90",
+        "blocks_per90",
+        "clearances_per90",
+        "ball_recoveries_per90"
+      ],
+      "pressing": [
+        "pressures_per90",
+        "counterpressures_per90"
+      ],
+      "aerial": [
+        "aerials_won_per90",
+        "aerials_lost_per90"
+      ]
+    },
+    "dimension_labels": {
+      "finishing": "Finishing",
+      "chance_creation": "Chance Creation",
+      "ball_progression": "Ball Progression",
+      "passing": "Passing",
+      "carrying": "Carrying",
+      "dribbling": "Dribbling",
+      "possession_involvement": "Possession Involvement",
+      "defensive_activity": "Defensive Activity",
+      "pressing": "Pressing",
+      "aerial": "Aerial Contribution"
+    },
+    "winsorize": {
+      "quantiles": [
+        0.005,
+        0.995
+      ],
+      "bounds": {
+        "aerials_lost_per90": [
+          0.0,
+          7.6799
+        ],
+        "aerials_won_per90": [
+          0.0,
+          7.1466
+        ],
+        "assists_per90": [
+          0.0,
+          0.6451
+        ],
+        "ball_recoveries_per90": [
+          0.9128,
+          7.6892
+        ],
+        "blocks_per90": [
+          0.2305,
+          3.9537
+        ],
+        "carries_into_box_per90": [
+          0.0,
+          3.7555
+        ],
+        "carries_into_final_third_per90": [
+          0.0,
+          5.9023
+        ],
+        "carries_per90": [
+          12.061,
+          87.5372
+        ],
+        "carry_distance_per90": [
+          24.4785,
+          298.5544
+        ],
+        "clearances_per90": [
+          0.0,
+          8.2412
+        ],
+        "counterpressures_per90": [
+          0.0,
+          7.0182
+        ],
+        "dribbles_completed_per90": [
+          0.0,
+          5.6103
+        ],
+        "dribbles_per90": [
+          0.0,
+          8.5355
+        ],
+        "fouls_won_per90": [
+          0.0,
+          4.5215
+        ],
+        "interceptions_per90": [
+          0.0,
+          2.0066
+        ],
+        "key_passes_per90": [
+          0.0,
+          3.0973
+        ],
+        "long_balls_per90": [
+          0.6581,
+          20.7219
+        ],
+        "non_penalty_goals_per90": [
+          0.0,
+          0.946
+        ],
+        "npxg_per90": [
+          0.0,
+          0.6576
+        ],
+        "pass_completion": [
+          0.5566,
+          0.9492
+        ],
+        "passes_completed_per90": [
+          9.554,
+          93.8216
+        ],
+        "passes_into_box_per90": [
+          0.0,
+          4.4673
+        ],
+        "passes_into_final_third_per90": [
+          0.2325,
+          10.8444
+        ],
+        "passes_per90": [
+          14.192,
+          102.5708
+        ],
+        "passes_received_per90": [
+          13.2033,
+          92.5074
+        ],
+        "pressures_per90": [
+          3.424,
+          31.8732
+        ],
+        "progressive_carries_per90": [
+          0.0,
+          10.0825
+        ],
+        "progressive_passes_per90": [
+          0.6519,
+          19.2517
+        ],
+        "shots_on_target_per90": [
+          0.0,
+          2.4406
+        ],
+        "shots_per90": [
+          0.0,
+          5.0853
+        ],
+        "tackles_per90": [
+          0.0,
+          4.3429
+        ],
+        "touches_attacking_third_per90": [
+          0.6276,
+          79.6254
+        ],
+        "touches_penalty_area_per90": [
+          0.0,
+          13.742
+        ],
+        "touches_per90": [
+          39.185,
+          206.1851
+        ],
+        "xa_per90": [
+          0.0,
+          0.3949
+        ]
+      }
+    },
+    "scaling": "StandardScaler (z-score) fitted on the pooled modeling population",
+    "scaler": {
+      "mean": [
+        1.6428,
+        1.6922,
+        0.0856,
+        3.8972,
+        1.7483,
+        0.4781,
+        1.537,
+        36.5618,
+        123.582,
+        2.1169,
+        2.9408,
+        0.887,
+        1.5754,
+        1.3278,
+        0.656,
+        0.7652,
+        7.852,
+        0.1176,
+        0.1099,
+        0.7894,
+        36.9511,
+        0.9415,
+        3.1145,
+        45.7476,
+        37.4478,
+        14.169,
+        2.7306,
+        5.728,
+        0.4021,
+        1.1867,
+        1.7067,
+        24.5301,
+        3.1938,
+        95.6441,
+        0.0819
+      ],
+      "scale": [
+        1.2234,
+        1.2949,
+        0.1232,
+        1.3638,
+        0.6718,
+        0.6741,
+        1.2064,
+        13.9734,
+        56.9404,
+        1.8722,
+        1.5132,
+        0.8946,
+        1.5144,
+        0.861,
+        0.429,
+        0.6412,
+        4.1194,
+        0.1756,
+        0.1279,
+        0.0823,
+        16.0072,
+        0.8972,
+        1.9912,
+        16.4744,
+        14.2214,
+        5.8119,
+        2.0596,
+        3.3779,
+        0.4546,
+        1.0319,
+        0.8872,
+        17.1577,
+        2.9249,
+        29.9387,
+        0.0823
+      ]
+    }
+  },
+  "pca": {
+    "n_components_fitted": 15,
+    "n_components_90pct": 13,
+    "explained_variance_ratio": [
+      0.3223,
+      0.2471,
+      0.0869,
+      0.0536,
+      0.042,
+      0.0357,
+      0.0252,
+      0.0232,
+      0.0191,
+      0.0163,
+      0.0151,
+      0.0133,
+      0.0125,
+      0.0113,
+      0.0101
+    ],
+    "cumulative_variance": [
+      0.3223,
+      0.5693,
+      0.6562,
+      0.7098,
+      0.7518,
+      0.7876,
+      0.8128,
+      0.836,
+      0.8551,
+      0.8714,
+      0.8865,
+      0.8998,
+      0.9123,
+      0.9236,
+      0.9338
+    ],
+    "loadings": {
+      "pc1": {
+        "aerials_lost_per90": 0.0239,
+        "aerials_won_per90": -0.1214,
+        "assists_per90": 0.1819,
+        "ball_recoveries_per90": 0.0687,
+        "blocks_per90": -0.0851,
+        "carries_into_box_per90": 0.2445,
+        "carries_into_final_third_per90": 0.2402,
+        "carries_per90": 0.0919,
+        "carry_distance_per90": 0.1512,
+        "clearances_per90": -0.2231,
+        "counterpressures_per90": 0.137,
+        "dribbles_completed_per90": 0.2402,
+        "dribbles_per90": 0.2536,
+        "fouls_won_per90": 0.1861,
+        "interceptions_per90": -0.0973,
+        "key_passes_per90": 0.2282,
+        "long_balls_per90": -0.1043,
+        "non_penalty_goals_per90": 0.1795,
+        "npxg_per90": 0.1981,
+        "pass_completion": -0.083,
+        "passes_completed_per90": -0.0273,
+        "passes_into_box_per90": 0.2069,
+        "passes_into_final_third_per90": 0.0087,
+        "passes_per90": -0.0125,
+        "passes_received_per90": 0.0845,
+        "pressures_per90": 0.0937,
+        "progressive_carries_per90": 0.2506,
+        "progressive_passes_per90": 0.004,
+        "shots_on_target_per90": 0.2243,
+        "shots_per90": 0.2338,
+        "tackles_per90": -0.0651,
+        "touches_attacking_third_per90": 0.2706,
+        "touches_penalty_area_per90": 0.2272,
+        "touches_per90": 0.0478,
+        "xa_per90": 0.2369
+      },
+      "pc2": {
+        "aerials_lost_per90": -0.1778,
+        "aerials_won_per90": -0.0965,
+        "assists_per90": 0.023,
+        "ball_recoveries_per90": 0.143,
+        "blocks_per90": 0.0286,
+        "carries_into_box_per90": -0.0619,
+        "carries_into_final_third_per90": 0.1014,
+        "carries_per90": 0.3057,
+        "carry_distance_per90": 0.2055,
+        "clearances_per90": 0.0049,
+        "counterpressures_per90": 0.039,
+        "dribbles_completed_per90": 0.0264,
+        "dribbles_per90": -0.0024,
+        "fouls_won_per90": 0.0066,
+        "interceptions_per90": 0.0932,
+        "key_passes_per90": 0.058,
+        "long_balls_per90": 0.2224,
+        "non_penalty_goals_per90": -0.1222,
+        "npxg_per90": -0.1523,
+        "pass_completion": 0.2103,
+        "passes_completed_per90": 0.3197,
+        "passes_into_box_per90": 0.0982,
+        "passes_into_final_third_per90": 0.2868,
+        "passes_per90": 0.3253,
+        "passes_received_per90": 0.2928,
+        "pressures_per90": -0.0066,
+        "progressive_carries_per90": 0.0549,
+        "progressive_passes_per90": 0.3028,
+        "shots_on_target_per90": -0.116,
+        "shots_per90": -0.1115,
+        "tackles_per90": 0.1085,
+        "touches_attacking_third_per90": 0.0322,
+        "touches_penalty_area_per90": -0.1408,
+        "touches_per90": 0.3182,
+        "xa_per90": 0.0342
+      },
+      "pc3": {
+        "aerials_lost_per90": 0.0081,
+        "aerials_won_per90": -0.0905,
+        "assists_per90": -0.0292,
+        "ball_recoveries_per90": 0.3076,
+        "blocks_per90": 0.3142,
+        "carries_into_box_per90": -0.0458,
+        "carries_into_final_third_per90": 0.0677,
+        "carries_per90": -0.0987,
+        "carry_distance_per90": -0.0448,
+        "clearances_per90": -0.1152,
+        "counterpressures_per90": 0.3523,
+        "dribbles_completed_per90": 0.0657,
+        "dribbles_per90": 0.0806,
+        "fouls_won_per90": 0.1199,
+        "interceptions_per90": 0.2093,
+        "key_passes_per90": 0.0628,
+        "long_balls_per90": -0.0748,
+        "non_penalty_goals_per90": -0.1849,
+        "npxg_per90": -0.1913,
+        "pass_completion": -0.188,
+        "passes_completed_per90": -0.1234,
+        "passes_into_box_per90": 0.0614,
+        "passes_into_final_third_per90": -0.0088,
+        "passes_per90": -0.082,
+        "passes_received_per90": -0.1555,
+        "pressures_per90": 0.432,
+        "progressive_carries_per90": 0.0272,
+        "progressive_passes_per90": -0.0569,
+        "shots_on_target_per90": -0.1591,
+        "shots_per90": -0.1186,
+        "tackles_per90": 0.3812,
+        "touches_attacking_third_per90": 0.0244,
+        "touches_penalty_area_per90": -0.1456,
+        "touches_per90": -0.0999,
+        "xa_per90": 0.001
+      }
+    }
+  },
+  "clustering": {
+    "space": "PCA (13 components, 90% variance)",
+    "candidates": [
+      {
+        "id": "kmeans_k3",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 3,
+          "n_init": 20
+        },
+        "k": 3,
+        "silhouette": 0.222,
+        "davies_bouldin": 1.5087,
+        "calinski_harabasz": 798.67,
+        "sizes": [
+          1222,
+          796,
+          643
+        ],
+        "noise": 0,
+        "min_size_share": 0.2416,
+        "inertia": 53072.1,
+        "eligible": true
+      },
+      {
+        "id": "agglomerative_ward_k3",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 3,
+          "linkage": "ward"
+        },
+        "k": 3,
+        "silhouette": 0.1442,
+        "davies_bouldin": 1.8456,
+        "calinski_harabasz": 614.96,
+        "sizes": [
+          868,
+          1192,
+          601
+        ],
+        "noise": 0,
+        "min_size_share": 0.2259,
+        "eligible": true
+      },
+      {
+        "id": "kmeans_k4",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 4,
+          "n_init": 20
+        },
+        "k": 4,
+        "silhouette": 0.2175,
+        "davies_bouldin": 1.5461,
+        "calinski_harabasz": 735.69,
+        "sizes": [
+          373,
+          636,
+          1185,
+          467
+        ],
+        "noise": 0,
+        "min_size_share": 0.1402,
+        "inertia": 46412.87,
+        "eligible": true
+      },
+      {
+        "id": "agglomerative_ward_k4",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 4,
+          "linkage": "ward"
+        },
+        "k": 4,
+        "silhouette": 0.1501,
+        "davies_bouldin": 1.7126,
+        "calinski_harabasz": 562.82,
+        "sizes": [
+          1192,
+          629,
+          601,
+          239
+        ],
+        "noise": 0,
+        "min_size_share": 0.0898,
+        "eligible": true
+      },
+      {
+        "id": "kmeans_k5",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 5,
+          "n_init": 20
+        },
+        "k": 5,
+        "silhouette": 0.191,
+        "davies_bouldin": 1.5237,
+        "calinski_harabasz": 690.71,
+        "sizes": [
+          648,
+          847,
+          401,
+          418,
+          347
+        ],
+        "noise": 0,
+        "min_size_share": 0.1304,
+        "inertia": 41645.42,
+        "eligible": true
+      },
+      {
+        "id": "agglomerative_ward_k5",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 5,
+          "linkage": "ward"
+        },
+        "k": 5,
+        "silhouette": 0.1564,
+        "davies_bouldin": 1.5903,
+        "calinski_harabasz": 539.2,
+        "sizes": [
+          601,
+          629,
+          1094,
+          239,
+          98
+        ],
+        "noise": 0,
+        "min_size_share": 0.0368,
+        "eligible": true
+      },
+      {
+        "id": "kmeans_k6",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 6,
+          "n_init": 20
+        },
+        "k": 6,
+        "silhouette": 0.1882,
+        "davies_bouldin": 1.4566,
+        "calinski_harabasz": 626.58,
+        "sizes": [
+          351,
+          571,
+          387,
+          235,
+          815,
+          302
+        ],
+        "noise": 0,
+        "min_size_share": 0.0883,
+        "inertia": 38975.44,
+        "eligible": true
+      },
+      {
+        "id": "agglomerative_ward_k6",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 6,
+          "linkage": "ward"
+        },
+        "k": 6,
+        "silhouette": 0.1459,
+        "davies_bouldin": 1.4264,
+        "calinski_harabasz": 503.58,
+        "sizes": [
+          629,
+          422,
+          1094,
+          239,
+          98,
+          179
+        ],
+        "noise": 0,
+        "min_size_share": 0.0368,
+        "eligible": true
+      },
+      {
+        "id": "kmeans_k7",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 7,
+          "n_init": 20
+        },
+        "k": 7,
+        "silhouette": 0.1818,
+        "davies_bouldin": 1.5097,
+        "calinski_harabasz": 589.62,
+        "sizes": [
+          255,
+          535,
+          136,
+          284,
+          745,
+          406,
+          300
+        ],
+        "noise": 0,
+        "min_size_share": 0.0511,
+        "inertia": 36419.73,
+        "eligible": true
+      },
+      {
+        "id": "agglomerative_ward_k7",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 7,
+          "linkage": "ward"
+        },
+        "k": 7,
+        "silhouette": 0.1382,
+        "davies_bouldin": 1.679,
+        "calinski_harabasz": 476.88,
+        "sizes": [
+          1094,
+          422,
+          382,
+          239,
+          98,
+          179,
+          247
+        ],
+        "noise": 0,
+        "min_size_share": 0.0368,
+        "eligible": true
+      },
+      {
+        "id": "kmeans_k8",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 8,
+          "n_init": 20
+        },
+        "k": 8,
+        "silhouette": 0.1693,
+        "davies_bouldin": 1.6755,
+        "calinski_harabasz": 545.93,
+        "sizes": [
+          597,
+          133,
+          399,
+          131,
+          469,
+          393,
+          260,
+          279
+        ],
+        "noise": 0,
+        "min_size_share": 0.0492,
+        "inertia": 34815.75,
+        "eligible": true
+      },
+      {
+        "id": "agglomerative_ward_k8",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 8,
+          "linkage": "ward"
+        },
+        "k": 8,
+        "silhouette": 0.1268,
+        "davies_bouldin": 1.8767,
+        "calinski_harabasz": 459.18,
+        "sizes": [
+          382,
+          616,
+          247,
+          422,
+          98,
+          179,
+          478,
+          239
+        ],
+        "noise": 0,
+        "min_size_share": 0.0368,
+        "eligible": true
+      },
+      {
+        "id": "kmeans_k9",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 9,
+          "n_init": 20
+        },
+        "k": 9,
+        "silhouette": 0.1615,
+        "davies_bouldin": 1.7671,
+        "calinski_harabasz": 506.3,
+        "sizes": [
+          126,
+          580,
+          225,
+          54,
+          460,
+          260,
+          380,
+          312,
+          264
+        ],
+        "noise": 0,
+        "min_size_share": 0.0203,
+        "inertia": 33619.37,
+        "eligible": false
+      },
+      {
+        "id": "agglomerative_ward_k9",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 9,
+          "linkage": "ward"
+        },
+        "k": 9,
+        "silhouette": 0.1253,
+        "davies_bouldin": 1.8434,
+        "calinski_harabasz": 430.45,
+        "sizes": [
+          247,
+          616,
+          253,
+          422,
+          98,
+          179,
+          478,
+          239,
+          129
+        ],
+        "noise": 0,
+        "min_size_share": 0.0368,
+        "eligible": true
+      },
+      {
+        "id": "kmeans_k10",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 10,
+          "n_init": 20
+        },
+        "k": 10,
+        "silhouette": 0.1633,
+        "davies_bouldin": 1.68,
+        "calinski_harabasz": 477.41,
+        "sizes": [
+          208,
+          278,
+          456,
+          117,
+          129,
+          261,
+          223,
+          564,
+          373,
+          52
+        ],
+        "noise": 0,
+        "min_size_share": 0.0195,
+        "inertia": 32420.26,
+        "eligible": false
+      },
+      {
+        "id": "agglomerative_ward_k10",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 10,
+          "linkage": "ward"
+        },
+        "k": 10,
+        "silhouette": 0.1282,
+        "davies_bouldin": 1.7843,
+        "calinski_harabasz": 408.16,
+        "sizes": [
+          253,
+          616,
+          478,
+          422,
+          98,
+          179,
+          223,
+          239,
+          129,
+          24
+        ],
+        "noise": 0,
+        "min_size_share": 0.009,
+        "eligible": false
+      },
+      {
+        "id": "kmeans_k11",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 11,
+          "n_init": 20
+        },
+        "k": 11,
+        "silhouette": 0.1648,
+        "davies_bouldin": 1.6405,
+        "calinski_harabasz": 452.21,
+        "sizes": [
+          315,
+          254,
+          458,
+          116,
+          52,
+          97,
+          147,
+          271,
+          179,
+          558,
+          214
+        ],
+        "noise": 0,
+        "min_size_share": 0.0195,
+        "inertia": 31393.91,
+        "eligible": false
+      },
+      {
+        "id": "agglomerative_ward_k11",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 11,
+          "linkage": "ward"
+        },
+        "k": 11,
+        "silhouette": 0.1299,
+        "davies_bouldin": 1.7052,
+        "calinski_harabasz": 388.93,
+        "sizes": [
+          478,
+          616,
+          223,
+          422,
+          98,
+          179,
+          211,
+          239,
+          129,
+          24,
+          42
+        ],
+        "noise": 0,
+        "min_size_share": 0.009,
+        "eligible": false
+      },
+      {
+        "id": "kmeans_k12",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 12,
+          "n_init": 20
+        },
+        "k": 12,
+        "silhouette": 0.1536,
+        "davies_bouldin": 1.7212,
+        "calinski_harabasz": 430.87,
+        "sizes": [
+          215,
+          230,
+          183,
+          268,
+          109,
+          431,
+          230,
+          95,
+          49,
+          285,
+          426,
+          140
+        ],
+        "noise": 0,
+        "min_size_share": 0.0184,
+        "inertia": 30462.84,
+        "eligible": false
+      },
+      {
+        "id": "agglomerative_ward_k12",
+        "algorithm": "Agglomerative (Ward)",
+        "params": {
+          "n_clusters": 12,
+          "linkage": "ward"
+        },
+        "k": 12,
+        "silhouette": 0.1245,
+        "davies_bouldin": 1.8634,
+        "calinski_harabasz": 372.82,
+        "sizes": [
+          616,
+          422,
+          223,
+          270,
+          98,
+          208,
+          211,
+          239,
+          129,
+          24,
+          42,
+          179
+        ],
+        "noise": 0,
+        "min_size_share": 0.009,
+        "eligible": false
+      },
+      {
+        "id": "dbscan_eps1.5",
+        "algorithm": "DBSCAN",
+        "params": {
+          "eps": 1.5,
+          "min_samples": 10
+        },
+        "k": 1,
+        "silhouette": null,
+        "davies_bouldin": null,
+        "calinski_harabasz": null,
+        "sizes": [
+          83
+        ],
+        "noise": 2578,
+        "min_size_share": 0.0,
+        "eligible": false
+      },
+      {
+        "id": "dbscan_eps2.0",
+        "algorithm": "DBSCAN",
+        "params": {
+          "eps": 2.0,
+          "min_samples": 10
+        },
+        "k": 3,
+        "silhouette": 0.2105,
+        "davies_bouldin": 0.9376,
+        "calinski_harabasz": 53.65,
+        "sizes": [
+          591,
+          22,
+          10
+        ],
+        "noise": 2038,
+        "min_size_share": 0.0161,
+        "eligible": false
+      },
+      {
+        "id": "dbscan_eps2.5",
+        "algorithm": "DBSCAN",
+        "params": {
+          "eps": 2.5,
+          "min_samples": 10
+        },
+        "k": 2,
+        "silhouette": 0.2375,
+        "davies_bouldin": 0.8739,
+        "calinski_harabasz": 23.52,
+        "sizes": [
+          1583,
+          10
+        ],
+        "noise": 1068,
+        "min_size_share": 0.0063,
+        "eligible": false
+      },
+      {
+        "id": "dbscan_eps3.0",
+        "algorithm": "DBSCAN",
+        "params": {
+          "eps": 3.0,
+          "min_samples": 10
+        },
+        "k": 2,
+        "silhouette": 0.5709,
+        "davies_bouldin": 0.4354,
+        "calinski_harabasz": 94.53,
+        "sizes": [
+          2250,
+          10
+        ],
+        "noise": 401,
+        "min_size_share": 0.0044,
+        "eligible": false
+      }
+    ],
+    "selected": {
+      "id": "kmeans_k3",
+      "algorithm": "KMeans",
+      "params": {
+        "n_clusters": 3,
+        "n_init": 20
+      },
+      "k": 3,
+      "silhouette": 0.222,
+      "davies_bouldin": 1.5087,
+      "calinski_harabasz": 798.67,
+      "sizes": [
+        1222,
+        796,
+        643
+      ],
+      "noise": 0,
+      "min_size_share": 0.2416,
+      "inertia": 53072.1,
+      "eligible": true
+    },
+    "global_position_mix": {
+      "0": {
+        "AM": 0.015,
+        "DF": 0.733,
+        "FW": 0.004,
+        "MF": 0.248
+      },
+      "1": {
+        "AM": 0.471,
+        "DF": 0.019,
+        "FW": 0.378,
+        "MF": 0.132
+      },
+      "2": {
+        "AM": 0.073,
+        "DF": 0.404,
+        "FW": 0.002,
+        "MF": 0.521
+      }
+    },
+    "selection_rule": "highest silhouette among eligible candidates (min cluster share 3%, DBSCAN noise <= 10%); Davies-Bouldin breaks ties",
+    "stage_note": "Global clustering (reported here) mostly separates positions. Archetypes come from a second stage that clusters each position group separately in its own PCA(90%) space, k in 2..6 chosen by silhouette.",
+    "by_position_group": {
+      "DF": {
+        "n": 1171,
+        "pca_components_90pct": 13,
+        "candidates": [
+          {
+            "id": "kmeans_k2",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 2,
+              "n_init": 20
+            },
+            "k": 2,
+            "silhouette": 0.2253,
+            "davies_bouldin": 1.7013,
+            "calinski_harabasz": 371.78,
+            "sizes": [
+              495,
+              676
+            ],
+            "noise": 0,
+            "min_size_share": 0.4227,
+            "inertia": 16052.65,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k2",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 2,
+              "linkage": "ward"
+            },
+            "k": 2,
+            "silhouette": 0.1897,
+            "davies_bouldin": 1.7736,
+            "calinski_harabasz": 325.52,
+            "sizes": [
+              617,
+              554
+            ],
+            "noise": 0,
+            "min_size_share": 0.4731,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k3",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 3,
+              "n_init": 20
+            },
+            "k": 3,
+            "silhouette": 0.2332,
+            "davies_bouldin": 1.4549,
+            "calinski_harabasz": 357.88,
+            "sizes": [
+              533,
+              409,
+              229
+            ],
+            "noise": 0,
+            "min_size_share": 0.1956,
+            "inertia": 13118.72,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k3",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 3,
+              "linkage": "ward"
+            },
+            "k": 3,
+            "silhouette": 0.2167,
+            "davies_bouldin": 1.5037,
+            "calinski_harabasz": 325.29,
+            "sizes": [
+              432,
+              554,
+              185
+            ],
+            "noise": 0,
+            "min_size_share": 0.158,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k4",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 4,
+              "n_init": 20
+            },
+            "k": 4,
+            "silhouette": 0.211,
+            "davies_bouldin": 1.5598,
+            "calinski_harabasz": 312.7,
+            "sizes": [
+              134,
+              371,
+              448,
+              218
+            ],
+            "noise": 0,
+            "min_size_share": 0.1144,
+            "inertia": 11729.24,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k4",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 4,
+              "linkage": "ward"
+            },
+            "k": 4,
+            "silhouette": 0.1913,
+            "davies_bouldin": 1.743,
+            "calinski_harabasz": 264.73,
+            "sizes": [
+              554,
+              330,
+              185,
+              102
+            ],
+            "noise": 0,
+            "min_size_share": 0.0871,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k5",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 5,
+              "n_init": 20
+            },
+            "k": 5,
+            "silhouette": 0.1697,
+            "davies_bouldin": 1.6413,
+            "calinski_harabasz": 273.63,
+            "sizes": [
+              226,
+              317,
+              131,
+              135,
+              362
+            ],
+            "noise": 0,
+            "min_size_share": 0.1119,
+            "inertia": 10913.48,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k5",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 5,
+              "linkage": "ward"
+            },
+            "k": 5,
+            "silhouette": 0.1272,
+            "davies_bouldin": 1.8958,
+            "calinski_harabasz": 231.11,
+            "sizes": [
+              398,
+              330,
+              185,
+              102,
+              156
+            ],
+            "noise": 0,
+            "min_size_share": 0.0871,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k6",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 6,
+              "n_init": 20
+            },
+            "k": 6,
+            "silhouette": 0.1452,
+            "davies_bouldin": 1.8279,
+            "calinski_harabasz": 241.0,
+            "sizes": [
+              92,
+              222,
+              128,
+              214,
+              245,
+              270
+            ],
+            "noise": 0,
+            "min_size_share": 0.0786,
+            "inertia": 10400.52,
+            "eligible": false
+          },
+          {
+            "id": "agglomerative_ward_k6",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 6,
+              "linkage": "ward"
+            },
+            "k": 6,
+            "silhouette": 0.1035,
+            "davies_bouldin": 1.911,
+            "calinski_harabasz": 207.95,
+            "sizes": [
+              185,
+              330,
+              250,
+              102,
+              156,
+              148
+            ],
+            "noise": 0,
+            "min_size_share": 0.0871,
+            "eligible": true
+          },
+          {
+            "id": "dbscan_eps2.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.0,
+              "min_samples": 8
+            },
+            "k": 3,
+            "silhouette": 0.1154,
+            "davies_bouldin": 1.1339,
+            "calinski_harabasz": 41.89,
+            "sizes": [
+              488,
+              29,
+              8
+            ],
+            "noise": 646,
+            "min_size_share": 0.0152,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps2.5",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.5,
+              "min_samples": 8
+            },
+            "k": 1,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [
+              944
+            ],
+            "noise": 227,
+            "min_size_share": 0.0,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps3.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 3.0,
+              "min_samples": 8
+            },
+            "k": 2,
+            "silhouette": 0.4414,
+            "davies_bouldin": 0.5873,
+            "calinski_harabasz": 38.81,
+            "sizes": [
+              1087,
+              7
+            ],
+            "noise": 77,
+            "min_size_share": 0.0064,
+            "eligible": false
+          }
+        ],
+        "selected": {
+          "id": "kmeans_k3",
+          "algorithm": "KMeans",
+          "params": {
+            "n_clusters": 3,
+            "n_init": 20
+          },
+          "k": 3,
+          "silhouette": 0.2332,
+          "davies_bouldin": 1.4549,
+          "calinski_harabasz": 357.88,
+          "sizes": [
+            533,
+            409,
+            229
+          ],
+          "noise": 0,
+          "min_size_share": 0.1956,
+          "inertia": 13118.72,
+          "eligible": true
+        }
+      },
+      "MF": {
+        "n": 743,
+        "pca_components_90pct": 12,
+        "candidates": [
+          {
+            "id": "kmeans_k2",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 2,
+              "n_init": 20
+            },
+            "k": 2,
+            "silhouette": 0.2649,
+            "davies_bouldin": 1.4987,
+            "calinski_harabasz": 268.48,
+            "sizes": [
+              517,
+              226
+            ],
+            "noise": 0,
+            "min_size_share": 0.3042,
+            "inertia": 13460.3,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k2",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 2,
+              "linkage": "ward"
+            },
+            "k": 2,
+            "silhouette": 0.2847,
+            "davies_bouldin": 1.4052,
+            "calinski_harabasz": 211.18,
+            "sizes": [
+              613,
+              130
+            ],
+            "noise": 0,
+            "min_size_share": 0.175,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k3",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 3,
+              "n_init": 20
+            },
+            "k": 3,
+            "silhouette": 0.2158,
+            "davies_bouldin": 1.5924,
+            "calinski_harabasz": 213.96,
+            "sizes": [
+              406,
+              144,
+              193
+            ],
+            "noise": 0,
+            "min_size_share": 0.1938,
+            "inertia": 11618.58,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k3",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 3,
+              "linkage": "ward"
+            },
+            "k": 3,
+            "silhouette": 0.23,
+            "davies_bouldin": 1.3546,
+            "calinski_harabasz": 164.01,
+            "sizes": [
+              557,
+              130,
+              56
+            ],
+            "noise": 0,
+            "min_size_share": 0.0754,
+            "eligible": false
+          },
+          {
+            "id": "kmeans_k4",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 4,
+              "n_init": 20
+            },
+            "k": 4,
+            "silhouette": 0.1796,
+            "davies_bouldin": 1.6119,
+            "calinski_harabasz": 194.37,
+            "sizes": [
+              236,
+              89,
+              111,
+              307
+            ],
+            "noise": 0,
+            "min_size_share": 0.1198,
+            "inertia": 10249.78,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k4",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 4,
+              "linkage": "ward"
+            },
+            "k": 4,
+            "silhouette": 0.1126,
+            "davies_bouldin": 1.9372,
+            "calinski_harabasz": 147.68,
+            "sizes": [
+              130,
+              297,
+              56,
+              260
+            ],
+            "noise": 0,
+            "min_size_share": 0.0754,
+            "eligible": false
+          },
+          {
+            "id": "kmeans_k5",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 5,
+              "n_init": 20
+            },
+            "k": 5,
+            "silhouette": 0.1359,
+            "davies_bouldin": 1.8245,
+            "calinski_harabasz": 166.07,
+            "sizes": [
+              207,
+              88,
+              198,
+              186,
+              64
+            ],
+            "noise": 0,
+            "min_size_share": 0.0861,
+            "inertia": 9650.64,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k5",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 5,
+              "linkage": "ward"
+            },
+            "k": 5,
+            "silhouette": 0.112,
+            "davies_bouldin": 1.8577,
+            "calinski_harabasz": 134.7,
+            "sizes": [
+              297,
+              260,
+              56,
+              89,
+              41
+            ],
+            "noise": 0,
+            "min_size_share": 0.0552,
+            "eligible": false
+          },
+          {
+            "id": "kmeans_k6",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 6,
+              "n_init": 20
+            },
+            "k": 6,
+            "silhouette": 0.1327,
+            "davies_bouldin": 1.9307,
+            "calinski_harabasz": 147.87,
+            "sizes": [
+              125,
+              185,
+              172,
+              66,
+              122,
+              73
+            ],
+            "noise": 0,
+            "min_size_share": 0.0888,
+            "inertia": 9154.1,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k6",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 6,
+              "linkage": "ward"
+            },
+            "k": 6,
+            "silhouette": 0.0945,
+            "davies_bouldin": 1.9811,
+            "calinski_harabasz": 124.55,
+            "sizes": [
+              260,
+              117,
+              180,
+              89,
+              41,
+              56
+            ],
+            "noise": 0,
+            "min_size_share": 0.0552,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps2.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.0,
+              "min_samples": 8
+            },
+            "k": 1,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [
+              89
+            ],
+            "noise": 654,
+            "min_size_share": 0.0,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps2.5",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.5,
+              "min_samples": 8
+            },
+            "k": 3,
+            "silhouette": 0.213,
+            "davies_bouldin": 1.0581,
+            "calinski_harabasz": 23.7,
+            "sizes": [
+              9,
+              310,
+              9
+            ],
+            "noise": 415,
+            "min_size_share": 0.0274,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps3.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 3.0,
+              "min_samples": 8
+            },
+            "k": 1,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [
+              575
+            ],
+            "noise": 168,
+            "min_size_share": 0.0,
+            "eligible": false
+          }
+        ],
+        "selected": {
+          "id": "agglomerative_ward_k2",
+          "algorithm": "Agglomerative (Ward)",
+          "params": {
+            "n_clusters": 2,
+            "linkage": "ward"
+          },
+          "k": 2,
+          "silhouette": 0.2847,
+          "davies_bouldin": 1.4052,
+          "calinski_harabasz": 211.18,
+          "sizes": [
+            613,
+            130
+          ],
+          "noise": 0,
+          "min_size_share": 0.175,
+          "eligible": true
+        }
+      },
+      "AM": {
+        "n": 440,
+        "pca_components_90pct": 13,
+        "candidates": [
+          {
+            "id": "kmeans_k2",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 2,
+              "n_init": 20
+            },
+            "k": 2,
+            "silhouette": 0.2288,
+            "davies_bouldin": 1.6975,
+            "calinski_harabasz": 132.14,
+            "sizes": [
+              146,
+              294
+            ],
+            "noise": 0,
+            "min_size_share": 0.3318,
+            "inertia": 9041.9,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k2",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 2,
+              "linkage": "ward"
+            },
+            "k": 2,
+            "silhouette": 0.1905,
+            "davies_bouldin": 1.9213,
+            "calinski_harabasz": 96.5,
+            "sizes": [
+              307,
+              133
+            ],
+            "noise": 0,
+            "min_size_share": 0.3023,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k3",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 3,
+              "n_init": 20
+            },
+            "k": 3,
+            "silhouette": 0.1487,
+            "davies_bouldin": 1.9115,
+            "calinski_harabasz": 100.74,
+            "sizes": [
+              87,
+              209,
+              144
+            ],
+            "noise": 0,
+            "min_size_share": 0.1977,
+            "inertia": 8055.68,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k3",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 3,
+              "linkage": "ward"
+            },
+            "k": 3,
+            "silhouette": 0.1179,
+            "davies_bouldin": 2.0695,
+            "calinski_harabasz": 77.46,
+            "sizes": [
+              133,
+              94,
+              213
+            ],
+            "noise": 0,
+            "min_size_share": 0.2136,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k4",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 4,
+              "n_init": 20
+            },
+            "k": 4,
+            "silhouette": 0.1498,
+            "davies_bouldin": 1.8379,
+            "calinski_harabasz": 88.46,
+            "sizes": [
+              174,
+              108,
+              122,
+              36
+            ],
+            "noise": 0,
+            "min_size_share": 0.0818,
+            "inertia": 7316.46,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k4",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 4,
+              "linkage": "ward"
+            },
+            "k": 4,
+            "silhouette": 0.1223,
+            "davies_bouldin": 1.9264,
+            "calinski_harabasz": 69.12,
+            "sizes": [
+              115,
+              94,
+              213,
+              18
+            ],
+            "noise": 0,
+            "min_size_share": 0.0409,
+            "eligible": false
+          },
+          {
+            "id": "kmeans_k5",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 5,
+              "n_init": 20
+            },
+            "k": 5,
+            "silhouette": 0.1307,
+            "davies_bouldin": 1.8896,
+            "calinski_harabasz": 78.33,
+            "sizes": [
+              90,
+              33,
+              148,
+              86,
+              83
+            ],
+            "noise": 0,
+            "min_size_share": 0.075,
+            "inertia": 6841.77,
+            "eligible": false
+          },
+          {
+            "id": "agglomerative_ward_k5",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 5,
+              "linkage": "ward"
+            },
+            "k": 5,
+            "silhouette": 0.1106,
+            "davies_bouldin": 1.8999,
+            "calinski_harabasz": 62.17,
+            "sizes": [
+              94,
+              66,
+              213,
+              18,
+              49
+            ],
+            "noise": 0,
+            "min_size_share": 0.0409,
+            "eligible": false
+          },
+          {
+            "id": "kmeans_k6",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 6,
+              "n_init": 20
+            },
+            "k": 6,
+            "silhouette": 0.1296,
+            "davies_bouldin": 1.8098,
+            "calinski_harabasz": 71.94,
+            "sizes": [
+              129,
+              62,
+              24,
+              110,
+              41,
+              74
+            ],
+            "noise": 0,
+            "min_size_share": 0.0545,
+            "inertia": 6435.96,
+            "eligible": false
+          },
+          {
+            "id": "agglomerative_ward_k6",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 6,
+              "linkage": "ward"
+            },
+            "k": 6,
+            "silhouette": 0.0989,
+            "davies_bouldin": 1.9064,
+            "calinski_harabasz": 57.96,
+            "sizes": [
+              213,
+              66,
+              70,
+              18,
+              49,
+              24
+            ],
+            "noise": 0,
+            "min_size_share": 0.0409,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps2.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.0,
+              "min_samples": 8
+            },
+            "k": 0,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [],
+            "noise": 440,
+            "min_size_share": 0.0,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps2.5",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.5,
+              "min_samples": 8
+            },
+            "k": 3,
+            "silhouette": 0.1872,
+            "davies_bouldin": 1.5119,
+            "calinski_harabasz": 10.62,
+            "sizes": [
+              19,
+              8,
+              8
+            ],
+            "noise": 405,
+            "min_size_share": 0.2286,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps3.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 3.0,
+              "min_samples": 8
+            },
+            "k": 1,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [
+              200
+            ],
+            "noise": 240,
+            "min_size_share": 0.0,
+            "eligible": false
+          }
+        ],
+        "selected": {
+          "id": "kmeans_k2",
+          "algorithm": "KMeans",
+          "params": {
+            "n_clusters": 2,
+            "n_init": 20
+          },
+          "k": 2,
+          "silhouette": 0.2288,
+          "davies_bouldin": 1.6975,
+          "calinski_harabasz": 132.14,
+          "sizes": [
+            146,
+            294
+          ],
+          "noise": 0,
+          "min_size_share": 0.3318,
+          "inertia": 9041.9,
+          "eligible": true
+        }
+      },
+      "FW": {
+        "n": 307,
+        "pca_components_90pct": 12,
+        "candidates": [
+          {
+            "id": "kmeans_k2",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 2,
+              "n_init": 20
+            },
+            "k": 2,
+            "silhouette": 0.3737,
+            "davies_bouldin": 1.2304,
+            "calinski_harabasz": 119.57,
+            "sizes": [
+              258,
+              49
+            ],
+            "noise": 0,
+            "min_size_share": 0.1596,
+            "inertia": 5454.74,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k2",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 2,
+              "linkage": "ward"
+            },
+            "k": 2,
+            "silhouette": 0.3914,
+            "davies_bouldin": 1.1809,
+            "calinski_harabasz": 115.55,
+            "sizes": [
+              265,
+              42
+            ],
+            "noise": 0,
+            "min_size_share": 0.1368,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k3",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 3,
+              "n_init": 20
+            },
+            "k": 3,
+            "silhouette": 0.1645,
+            "davies_bouldin": 1.6806,
+            "calinski_harabasz": 94.4,
+            "sizes": [
+              98,
+              40,
+              169
+            ],
+            "noise": 0,
+            "min_size_share": 0.1303,
+            "inertia": 4683.99,
+            "eligible": true
+          },
+          {
+            "id": "agglomerative_ward_k3",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 3,
+              "linkage": "ward"
+            },
+            "k": 3,
+            "silhouette": 0.1566,
+            "davies_bouldin": 1.4588,
+            "calinski_harabasz": 83.13,
+            "sizes": [
+              222,
+              42,
+              43
+            ],
+            "noise": 0,
+            "min_size_share": 0.1368,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k4",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 4,
+              "n_init": 20
+            },
+            "k": 4,
+            "silhouette": 0.1648,
+            "davies_bouldin": 1.6262,
+            "calinski_harabasz": 84.92,
+            "sizes": [
+              130,
+              69,
+              13,
+              95
+            ],
+            "noise": 0,
+            "min_size_share": 0.0423,
+            "inertia": 4124.82,
+            "eligible": false
+          },
+          {
+            "id": "agglomerative_ward_k4",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 4,
+              "linkage": "ward"
+            },
+            "k": 4,
+            "silhouette": 0.1322,
+            "davies_bouldin": 1.7127,
+            "calinski_harabasz": 70.86,
+            "sizes": [
+              42,
+              184,
+              43,
+              38
+            ],
+            "noise": 0,
+            "min_size_share": 0.1238,
+            "eligible": true
+          },
+          {
+            "id": "kmeans_k5",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 5,
+              "n_init": 20
+            },
+            "k": 5,
+            "silhouette": 0.1852,
+            "davies_bouldin": 1.546,
+            "calinski_harabasz": 80.03,
+            "sizes": [
+              92,
+              34,
+              112,
+              56,
+              13
+            ],
+            "noise": 0,
+            "min_size_share": 0.0423,
+            "inertia": 3685.87,
+            "eligible": false
+          },
+          {
+            "id": "agglomerative_ward_k5",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 5,
+              "linkage": "ward"
+            },
+            "k": 5,
+            "silhouette": 0.1445,
+            "davies_bouldin": 1.6038,
+            "calinski_harabasz": 65.82,
+            "sizes": [
+              184,
+              16,
+              43,
+              38,
+              26
+            ],
+            "noise": 0,
+            "min_size_share": 0.0521,
+            "eligible": false
+          },
+          {
+            "id": "kmeans_k6",
+            "algorithm": "KMeans",
+            "params": {
+              "n_clusters": 6,
+              "n_init": 20
+            },
+            "k": 6,
+            "silhouette": 0.1567,
+            "davies_bouldin": 1.6366,
+            "calinski_harabasz": 72.6,
+            "sizes": [
+              75,
+              13,
+              55,
+              65,
+              70,
+              29
+            ],
+            "noise": 0,
+            "min_size_share": 0.0423,
+            "inertia": 3442.09,
+            "eligible": false
+          },
+          {
+            "id": "agglomerative_ward_k6",
+            "algorithm": "Agglomerative (Ward)",
+            "params": {
+              "n_clusters": 6,
+              "linkage": "ward"
+            },
+            "k": 6,
+            "silhouette": 0.1282,
+            "davies_bouldin": 1.7809,
+            "calinski_harabasz": 62.8,
+            "sizes": [
+              16,
+              115,
+              69,
+              38,
+              26,
+              43
+            ],
+            "noise": 0,
+            "min_size_share": 0.0521,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps2.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.0,
+              "min_samples": 8
+            },
+            "k": 1,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [
+              19
+            ],
+            "noise": 288,
+            "min_size_share": 0.0,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps2.5",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 2.5,
+              "min_samples": 8
+            },
+            "k": 1,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [
+              129
+            ],
+            "noise": 178,
+            "min_size_share": 0.0,
+            "eligible": false
+          },
+          {
+            "id": "dbscan_eps3.0",
+            "algorithm": "DBSCAN",
+            "params": {
+              "eps": 3.0,
+              "min_samples": 8
+            },
+            "k": 1,
+            "silhouette": null,
+            "davies_bouldin": null,
+            "calinski_harabasz": null,
+            "sizes": [
+              204
+            ],
+            "noise": 103,
+            "min_size_share": 0.0,
+            "eligible": false
+          }
+        ],
+        "selected": {
+          "id": "agglomerative_ward_k2",
+          "algorithm": "Agglomerative (Ward)",
+          "params": {
+            "n_clusters": 2,
+            "linkage": "ward"
+          },
+          "k": 2,
+          "silhouette": 0.3914,
+          "davies_bouldin": 1.1809,
+          "calinski_harabasz": 115.55,
+          "sizes": [
+            265,
+            42
+          ],
+          "noise": 0,
+          "min_size_share": 0.1368,
+          "eligible": true
+        }
+      }
+    },
+    "archetypes": [
+      {
+        "cluster": 0,
+        "name": "Stopper Centre-Back",
+        "match_score": 0.51,
+        "alternatives": [
+          "Defensive Full-Back",
+          "Ball-Playing Centre-Back"
+        ],
+        "defining_high": [
+          "Aerial Contribution"
+        ],
+        "defining_low": [
+          "Possession Involvement",
+          "Carrying"
+        ],
+        "position_mix": [
+          "CB 78%",
+          "FB 22%"
+        ],
+        "description": "Mostly players whose profile is defined by aerial contribution, with comparatively little possession involvement, carrying.",
+        "centroid": {
+          "finishing": -0.154,
+          "chance_creation": -0.526,
+          "ball_progression": -0.769,
+          "passing": -0.514,
+          "carrying": -0.771,
+          "dribbling": -0.47,
+          "possession_involvement": -0.773,
+          "defensive_activity": 0.033,
+          "pressing": -0.368,
+          "aerial": 0.342
+        },
+        "local_cluster": 0,
+        "position_group": "DF",
+        "size": 533,
+        "mean_coverage": 72.6,
+        "global_centroid": {
+          "finishing": -0.614,
+          "chance_creation": -0.753,
+          "ball_progression": -0.69,
+          "passing": -0.058,
+          "carrying": -0.698,
+          "dribbling": -0.751,
+          "possession_involvement": -0.767,
+          "defensive_activity": 0.244,
+          "pressing": -0.911,
+          "aerial": 0.447
+        },
+        "representatives": [
+          {
+            "player_season_id": "7034_11_27",
+            "player": "Mateo Musacchio",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "6762_11_27",
+            "player": "\u00c1lvaro Gonz\u00e1lez",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "16456_11_27",
+            "player": "Enzo Roco",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "164481_1238_108",
+            "player": "Narayan Das",
+            "season_key": "Indian Super league 2021/22"
+          },
+          {
+            "player_season_id": "10936_7_27",
+            "player": "Lorik Cana",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "6788_11_27",
+            "player": "Xabier Etxeita",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "162203_1238_108",
+            "player": "Pratik Prabhakar Chaudhari",
+            "season_key": "Indian Super league 2021/22"
+          },
+          {
+            "player_season_id": "8877_12_27",
+            "player": "Bo\u0161tjan Cesar",
+            "season_key": "Serie A 2015/16"
+          }
+        ]
+      },
+      {
+        "cluster": 1,
+        "name": "Progressive Full-Back",
+        "match_score": 0.672,
+        "alternatives": [
+          "Wide Defender",
+          "Deep-Lying Playmaker"
+        ],
+        "defining_high": [
+          "Chance Creation",
+          "Dribbling",
+          "Pressing"
+        ],
+        "defining_low": [
+          "Aerial Contribution",
+          "Passing"
+        ],
+        "position_mix": [
+          "FB 97%"
+        ],
+        "description": "Mostly players whose profile is defined by chance creation, dribbling, pressing, with comparatively little aerial contribution, passing.",
+        "centroid": {
+          "finishing": 0.186,
+          "chance_creation": 0.888,
+          "ball_progression": 0.654,
+          "passing": -0.155,
+          "carrying": 0.448,
+          "dribbling": 0.884,
+          "possession_involvement": 0.537,
+          "defensive_activity": 0.268,
+          "pressing": 0.838,
+          "aerial": -0.56
+        },
+        "local_cluster": 1,
+        "position_group": "DF",
+        "size": 409,
+        "mean_coverage": 75.4,
+        "global_centroid": {
+          "finishing": -0.512,
+          "chance_creation": 0.079,
+          "ball_progression": 0.205,
+          "passing": 0.188,
+          "carrying": 0.089,
+          "dribbling": -0.094,
+          "possession_involvement": 0.041,
+          "defensive_activity": 0.357,
+          "pressing": -0.15,
+          "aerial": -0.044
+        },
+        "representatives": [
+          {
+            "player_season_id": "3650_2_27",
+            "player": "Daryl Janmaat",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "3205_2_27",
+            "player": "Kyle Walker",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "7479_12_27",
+            "player": "Cristian Molinaro",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "25854_11_38",
+            "player": "Sylvinho",
+            "season_key": "La Liga 2005/06"
+          },
+          {
+            "player_season_id": "3247_7_27",
+            "player": "Fabinho",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "9533_2_27",
+            "player": "Leandro Bacuna",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "3340_2_27",
+            "player": "Kyle Naughton",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "5245_43_106",
+            "player": "Achraf Hakimi",
+            "season_key": "FIFA World Cup 2022"
+          }
+        ]
+      },
+      {
+        "cluster": 2,
+        "name": "Deep-Lying Playmaker",
+        "match_score": 0.733,
+        "alternatives": [
+          "Ball-Playing Centre-Back",
+          "Progressive Full-Back"
+        ],
+        "defining_high": [
+          "Passing",
+          "Carrying",
+          "Possession Involvement"
+        ],
+        "defining_low": [
+          "Pressing",
+          "Defensive Activity"
+        ],
+        "position_mix": [
+          "CB 90%"
+        ],
+        "description": "Mostly players whose profile is defined by passing, carrying, possession involvement, with comparatively little pressing, defensive activity.",
+        "centroid": {
+          "finishing": 0.026,
+          "chance_creation": -0.361,
+          "ball_progression": 0.622,
+          "passing": 1.473,
+          "carrying": 0.994,
+          "dribbling": -0.486,
+          "possession_involvement": 0.84,
+          "defensive_activity": -0.555,
+          "pressing": -0.638,
+          "aerial": 0.205
+        },
+        "local_cluster": 2,
+        "position_group": "DF",
+        "size": 229,
+        "mean_coverage": 62.8,
+        "global_centroid": {
+          "finishing": -0.56,
+          "chance_creation": -0.656,
+          "ball_progression": 0.185,
+          "passing": 1.303,
+          "carrying": 0.441,
+          "dribbling": -0.759,
+          "possession_involvement": 0.228,
+          "defensive_activity": -0.038,
+          "pressing": -1.081,
+          "aerial": 0.372
+        },
+        "representatives": [
+          {
+            "player_season_id": "10609_11_26",
+            "player": "J\u00e9r\u00e9my Mathieu",
+            "season_key": "La Liga 2014/15"
+          },
+          {
+            "player_season_id": "2999_7_108",
+            "player": "Presnel Kimpembe",
+            "season_key": "Ligue 1 2021/22"
+          },
+          {
+            "player_season_id": "5478_43_3",
+            "player": "Trent Sainsbury",
+            "season_key": "FIFA World Cup 2018"
+          },
+          {
+            "player_season_id": "5492_11_2",
+            "player": "Samuel Umtiti",
+            "season_key": "La Liga 2016/17"
+          },
+          {
+            "player_season_id": "5558_11_41",
+            "player": "Rafael M\u00e1rquez",
+            "season_key": "La Liga 2008/09"
+          },
+          {
+            "player_season_id": "7056_12_27",
+            "player": "Nenad Tomovi\u0107",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "40427_12_27",
+            "player": "Cesare Bovo",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "7476_12_27",
+            "player": "Emiliano Moretti",
+            "season_key": "Serie A 2015/16"
+          }
+        ]
+      },
+      {
+        "cluster": 3,
+        "name": "Ball-Winning Midfielder",
+        "match_score": 0.263,
+        "alternatives": [
+          "Pressing Midfielder",
+          "Anchor Midfielder"
+        ],
+        "defining_high": [],
+        "defining_low": [
+          "Passing",
+          "Possession Involvement"
+        ],
+        "position_mix": [
+          "DM 51%",
+          "CM 31%",
+          "WM 15%"
+        ],
+        "description": "Mostly players whose profile is defined by a balanced profile, with comparatively little passing, possession involvement.",
+        "centroid": {
+          "finishing": -0.009,
+          "chance_creation": -0.12,
+          "ball_progression": -0.289,
+          "passing": -0.327,
+          "carrying": -0.254,
+          "dribbling": -0.063,
+          "possession_involvement": -0.319,
+          "defensive_activity": 0.095,
+          "pressing": 0.038,
+          "aerial": 0.061
+        },
+        "local_cluster": 0,
+        "position_group": "MF",
+        "size": 613,
+        "mean_coverage": 74.9,
+        "global_centroid": {
+          "finishing": -0.204,
+          "chance_creation": -0.016,
+          "ball_progression": 0.087,
+          "passing": 0.016,
+          "carrying": -0.129,
+          "dribbling": 0.063,
+          "possession_involvement": -0.12,
+          "defensive_activity": 0.278,
+          "pressing": 0.787,
+          "aerial": -0.078
+        },
+        "representatives": [
+          {
+            "player_season_id": "6659_11_27",
+            "player": "V\u00edctor Camarasa",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "6771_11_27",
+            "player": "Manu Trigueros",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "6764_11_27",
+            "player": "Pablo Fornals",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "3150_7_27",
+            "player": "Jaroslav Pla\u0161il",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "6580_11_27",
+            "player": "Recio",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "401509_7_27",
+            "player": "David Ducourtioux",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "9578_2_27",
+            "player": "Jonathan Howson",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "8967_55_282",
+            "player": "Ondrej Duda",
+            "season_key": "UEFA Euro 2024"
+          }
+        ]
+      },
+      {
+        "cluster": 4,
+        "name": "Advanced Playmaker",
+        "match_score": 0.804,
+        "alternatives": [
+          "Deep-Lying Playmaker",
+          "Creative Playmaker"
+        ],
+        "defining_high": [
+          "Passing",
+          "Possession Involvement",
+          "Ball Progression"
+        ],
+        "defining_low": [
+          "Defensive Activity",
+          "Aerial Contribution"
+        ],
+        "position_mix": [
+          "CM 50%",
+          "DM 48%"
+        ],
+        "description": "Mostly players whose profile is defined by passing, possession involvement, ball progression, with comparatively little defensive activity, aerial contribution.",
+        "centroid": {
+          "finishing": 0.042,
+          "chance_creation": 0.565,
+          "ball_progression": 1.361,
+          "passing": 1.54,
+          "carrying": 1.2,
+          "dribbling": 0.295,
+          "possession_involvement": 1.503,
+          "defensive_activity": -0.447,
+          "pressing": -0.177,
+          "aerial": -0.288
+        },
+        "local_cluster": 1,
+        "position_group": "MF",
+        "size": 130,
+        "mean_coverage": 79.2,
+        "global_centroid": {
+          "finishing": -0.179,
+          "chance_creation": 0.527,
+          "ball_progression": 1.357,
+          "passing": 1.594,
+          "carrying": 0.911,
+          "dribbling": 0.334,
+          "possession_involvement": 1.194,
+          "defensive_activity": -0.013,
+          "pressing": 0.618,
+          "aerial": -0.232
+        },
+        "representatives": [
+          {
+            "player_season_id": "5470_11_1",
+            "player": "Ivan Rakiti\u0107",
+            "season_key": "La Liga 2017/18"
+          },
+          {
+            "player_season_id": "5463_43_106",
+            "player": "Luka Modri\u0107",
+            "season_key": "FIFA World Cup 2022"
+          },
+          {
+            "player_season_id": "3359_7_27",
+            "player": "Jean Micha\u00ebl Seri",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "7797_43_106",
+            "player": "Rodrigo De Paul",
+            "season_key": "FIFA World Cup 2022"
+          },
+          {
+            "player_season_id": "26848_11_27",
+            "player": "Roberto Trashorras",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "20131_11_39",
+            "player": "Xavi",
+            "season_key": "La Liga 2006/07"
+          },
+          {
+            "player_season_id": "18414_2_27",
+            "player": "Bastian Schweinsteiger",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "5574_11_27",
+            "player": "Toni Kroos",
+            "season_key": "La Liga 2015/16"
+          }
+        ]
+      },
+      {
+        "cluster": 5,
+        "name": "Progressive Creator",
+        "match_score": 0.79,
+        "alternatives": [
+          "Wide Creator",
+          "Advanced Playmaker"
+        ],
+        "defining_high": [
+          "Carrying",
+          "Ball Progression",
+          "Possession Involvement"
+        ],
+        "defining_low": [
+          "Aerial Contribution"
+        ],
+        "position_mix": [
+          "W 77%",
+          "AM 20%"
+        ],
+        "description": "Mostly players whose profile is defined by carrying, ball progression, possession involvement, with comparatively little aerial contribution.",
+        "centroid": {
+          "finishing": 0.531,
+          "chance_creation": 0.766,
+          "ball_progression": 0.982,
+          "passing": 0.629,
+          "carrying": 1.069,
+          "dribbling": 0.828,
+          "possession_involvement": 0.966,
+          "defensive_activity": -0.142,
+          "pressing": -0.083,
+          "aerial": -0.186
+        },
+        "local_cluster": 0,
+        "position_group": "AM",
+        "size": 146,
+        "mean_coverage": 82.8,
+        "global_centroid": {
+          "finishing": 1.244,
+          "chance_creation": 1.65,
+          "ball_progression": 1.024,
+          "passing": -0.123,
+          "carrying": 1.54,
+          "dribbling": 1.77,
+          "possession_involvement": 1.119,
+          "defensive_activity": -0.429,
+          "pressing": 0.358,
+          "aerial": -0.454
+        },
+        "representatives": [
+          {
+            "player_season_id": "3533_43_3",
+            "player": "Xherdan Shaqiri",
+            "season_key": "FIFA World Cup 2018"
+          },
+          {
+            "player_season_id": "6724_11_27",
+            "player": "Nolito",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "7006_12_27",
+            "player": "Papu G\u00f3mez",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "10755_11_27",
+            "player": "Jonathan Viera",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "3745_7_27",
+            "player": "Lucas Moura",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "3372_7_27",
+            "player": "Rachid Ghezzal",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "7150_12_27",
+            "player": "Riccardo Saponara",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "6658_12_27",
+            "player": "Cristian Tello",
+            "season_key": "Serie A 2015/16"
+          }
+        ]
+      },
+      {
+        "cluster": 6,
+        "name": "Wide Worker",
+        "match_score": 0.33,
+        "alternatives": [
+          "Pressing Forward",
+          "Pressing Midfielder"
+        ],
+        "defining_high": [],
+        "defining_low": [
+          "Carrying",
+          "Ball Progression"
+        ],
+        "position_mix": [
+          "W 71%",
+          "AM 26%"
+        ],
+        "description": "Mostly players whose profile is defined by a balanced profile, with comparatively little carrying, ball progression.",
+        "centroid": {
+          "finishing": -0.264,
+          "chance_creation": -0.381,
+          "ball_progression": -0.488,
+          "passing": -0.312,
+          "carrying": -0.531,
+          "dribbling": -0.411,
+          "possession_involvement": -0.48,
+          "defensive_activity": 0.071,
+          "pressing": 0.041,
+          "aerial": 0.093
+        },
+        "local_cluster": 1,
+        "position_group": "AM",
+        "size": 294,
+        "mean_coverage": 70.5,
+        "global_centroid": {
+          "finishing": 0.554,
+          "chance_creation": 0.558,
+          "ball_progression": 0.024,
+          "passing": -0.661,
+          "carrying": 0.191,
+          "dribbling": 0.498,
+          "possession_involvement": 0.166,
+          "defensive_activity": -0.327,
+          "pressing": 0.46,
+          "aerial": -0.366
+        },
+        "representatives": [
+          {
+            "player_season_id": "3151_7_27",
+            "player": "Jules Iloki",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "3629_43_3",
+            "player": "Sadio Man\u00e9",
+            "season_key": "FIFA World Cup 2018"
+          },
+          {
+            "player_season_id": "3325_2_27",
+            "player": "Marko Arnautovi\u0107",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "3469_2_27",
+            "player": "Bakary Sako",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "7349_7_27",
+            "player": "Ga\u00ebl Danic",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "4260_7_27",
+            "player": "Romain Hamouma",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "30512_12_27",
+            "player": "Aleksandar Trajkovski",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "5718_11_27",
+            "player": "Rodrigo",
+            "season_key": "La Liga 2015/16"
+          }
+        ]
+      },
+      {
+        "cluster": 7,
+        "name": "Poacher",
+        "match_score": 0.275,
+        "alternatives": [
+          "Target Forward",
+          "Pressing Forward"
+        ],
+        "defining_high": [],
+        "defining_low": [
+          "Possession Involvement",
+          "Carrying"
+        ],
+        "position_mix": [
+          "ST 100%"
+        ],
+        "description": "Mostly players whose profile is defined by a balanced profile, with comparatively little possession involvement, carrying.",
+        "centroid": {
+          "finishing": -0.233,
+          "chance_creation": -0.253,
+          "ball_progression": -0.259,
+          "passing": -0.235,
+          "carrying": -0.262,
+          "dribbling": -0.236,
+          "possession_involvement": -0.272,
+          "defensive_activity": 0.061,
+          "pressing": 0.103,
+          "aerial": 0.052
+        },
+        "local_cluster": 0,
+        "position_group": "FW",
+        "size": 265,
+        "mean_coverage": 75.8,
+        "global_centroid": {
+          "finishing": 1.304,
+          "chance_creation": -0.005,
+          "ball_progression": -0.637,
+          "passing": -1.247,
+          "carrying": -0.486,
+          "dribbling": 0.215,
+          "possession_involvement": -0.015,
+          "defensive_activity": -0.882,
+          "pressing": 0.224,
+          "aerial": -0.137
+        },
+        "representatives": [
+          {
+            "player_season_id": "3018_7_27",
+            "player": "Giovanni Sio",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "3679_7_27",
+            "player": "Souleymane Camara",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "36770_12_27",
+            "player": "Mauricio Ricardo Pinilla Ferreira",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "91089_223_282",
+            "player": "Jos\u00e9 Fajardo Nelson",
+            "season_key": "Copa America 2024"
+          },
+          {
+            "player_season_id": "3210_7_27",
+            "player": "Val\u00e8re Germain",
+            "season_key": "Ligue 1 2015/16"
+          },
+          {
+            "player_season_id": "8419_11_27",
+            "player": "Duje \u010cop",
+            "season_key": "La Liga 2015/16"
+          },
+          {
+            "player_season_id": "5679_43_3",
+            "player": "Y\u016bya \u014csako",
+            "season_key": "FIFA World Cup 2018"
+          },
+          {
+            "player_season_id": "3179_7_27",
+            "player": "Nolan Roux",
+            "season_key": "Ligue 1 2015/16"
+          }
+        ]
+      },
+      {
+        "cluster": 8,
+        "name": "Complete Forward",
+        "match_score": 0.748,
+        "alternatives": [
+          "Creative Forward",
+          "Second Striker"
+        ],
+        "defining_high": [
+          "Possession Involvement",
+          "Carrying",
+          "Ball Progression"
+        ],
+        "defining_low": [
+          "Pressing",
+          "Defensive Activity"
+        ],
+        "position_mix": [
+          "ST 100%"
+        ],
+        "description": "Mostly players whose profile is defined by possession involvement, carrying, ball progression, with comparatively little pressing, defensive activity.",
+        "centroid": {
+          "finishing": 1.467,
+          "chance_creation": 1.594,
+          "ball_progression": 1.632,
+          "passing": 1.48,
+          "carrying": 1.65,
+          "dribbling": 1.488,
+          "possession_involvement": 1.716,
+          "defensive_activity": -0.388,
+          "pressing": -0.65,
+          "aerial": -0.326
+        },
+        "local_cluster": 1,
+        "position_group": "FW",
+        "size": 42,
+        "mean_coverage": 84.5,
+        "global_centroid": {
+          "finishing": 2.942,
+          "chance_creation": 1.361,
+          "ball_progression": 0.563,
+          "passing": -0.443,
+          "carrying": 1.041,
+          "dribbling": 1.637,
+          "possession_involvement": 1.195,
+          "defensive_activity": -1.037,
+          "pressing": -0.357,
+          "aerial": -0.4
+        },
+        "representatives": [
+          {
+            "player_season_id": "2988_55_43",
+            "player": "Memphis Depay",
+            "season_key": "UEFA Euro 2020"
+          },
+          {
+            "player_season_id": "5246_11_4",
+            "player": "Luis Su\u00e1rez",
+            "season_key": "La Liga 2018/19"
+          },
+          {
+            "player_season_id": "19298_11_38",
+            "player": "Samuel Eto'o",
+            "season_key": "La Liga 2005/06"
+          },
+          {
+            "player_season_id": "3434_12_27",
+            "player": "Stevan Joveti\u0107",
+            "season_key": "Serie A 2015/16"
+          },
+          {
+            "player_season_id": "3237_2_27",
+            "player": "Sergio Ag\u00fcero",
+            "season_key": "Premier League 2015/16"
+          },
+          {
+            "player_season_id": "15516_2_44",
+            "player": "Thierry Henry",
+            "season_key": "Premier League 2003/04"
+          },
+          {
+            "player_season_id": "3083_43_3",
+            "player": "Son Heung-Min",
+            "season_key": "FIFA World Cup 2018"
+          },
+          {
+            "player_season_id": "3009_7_108",
+            "player": "Kylian Mbapp\u00e9",
+            "season_key": "Ligue 1 2021/22"
+          }
+        ]
+      }
+    ],
+    "archetype_naming": "cosine match between each cluster's position-relative DNA centroid (z-scored within its position group) and a signature lexicon restricted to that position group; names are unique per group"
+  },
+  "similarity": {
+    "candidates": [
+      {
+        "space": "z_raw",
+        "metric": "euclidean",
+        "queries": 960,
+        "hit_at_1": 0.1812,
+        "hit_at_k": 0.2729,
+        "mean_reciprocal_rank": 0.2148,
+        "k": 5
+      },
+      {
+        "space": "z_raw",
+        "metric": "cosine",
+        "queries": 960,
+        "hit_at_1": 0.1906,
+        "hit_at_k": 0.2729,
+        "mean_reciprocal_rank": 0.219,
+        "k": 5
+      },
+      {
+        "space": "z_raw",
+        "metric": "manhattan",
+        "queries": 960,
+        "hit_at_1": 0.1958,
+        "hit_at_k": 0.2792,
+        "mean_reciprocal_rank": 0.2259,
+        "k": 5
+      },
+      {
+        "space": "pca_13",
+        "metric": "euclidean",
+        "queries": 960,
+        "hit_at_1": 0.1667,
+        "hit_at_k": 0.2552,
+        "mean_reciprocal_rank": 0.2007,
+        "k": 5
+      },
+      {
+        "space": "pca_13",
+        "metric": "cosine",
+        "queries": 960,
+        "hit_at_1": 0.1656,
+        "hit_at_k": 0.2687,
+        "mean_reciprocal_rank": 0.2019,
+        "k": 5
+      },
+      {
+        "space": "pca_13",
+        "metric": "manhattan",
+        "queries": 960,
+        "hit_at_1": 0.1646,
+        "hit_at_k": 0.2573,
+        "mean_reciprocal_rank": 0.1985,
+        "k": 5
+      },
+      {
+        "space": "dna_z",
+        "metric": "euclidean",
+        "queries": 960,
+        "hit_at_1": 0.1437,
+        "hit_at_k": 0.2365,
+        "mean_reciprocal_rank": 0.1784,
+        "k": 5
+      },
+      {
+        "space": "dna_z",
+        "metric": "cosine",
+        "queries": 960,
+        "hit_at_1": 0.1448,
+        "hit_at_k": 0.2219,
+        "mean_reciprocal_rank": 0.1728,
+        "k": 5
+      },
+      {
+        "space": "dna_z",
+        "metric": "manhattan",
+        "queries": 960,
+        "hit_at_1": 0.1406,
+        "hit_at_k": 0.2437,
+        "mean_reciprocal_rank": 0.1782,
+        "k": 5
+      }
+    ],
+    "selected": {
+      "space": "z_raw",
+      "metric": "manhattan",
+      "queries": 960,
+      "hit_at_1": 0.1958,
+      "hit_at_k": 0.2792,
+      "mean_reciprocal_rank": 0.2259,
+      "k": 5
+    },
+    "validation": "self-retrieval: for players with 2+ qualifying seasons, does another season of the same player appear in the top-5 neighbours of a query season?",
+    "distance_grid": [
+      6.38359,
+      9.70868,
+      10.72446,
+      11.4155,
+      11.91979,
+      12.36251,
+      12.68494,
+      13.03354,
+      13.28662,
+      13.52719,
+      13.76172,
+      14.00925,
+      14.18887,
+      14.36327,
+      14.52077,
+      14.67849,
+      14.85491,
+      14.99793,
+      15.1561,
+      15.30298,
+      15.44811,
+      15.58376,
+      15.73122,
+      15.84014,
+      15.96532,
+      16.09202,
+      16.21244,
+      16.31831,
+      16.42873,
+      16.54752,
+      16.65416,
+      16.7577,
+      16.85097,
+      16.94645,
+      17.03948,
+      17.12806,
+      17.22108,
+      17.30007,
+      17.38995,
+      17.47771,
+      17.56497,
+      17.65125,
+      17.73347,
+      17.81082,
+      17.89383,
+      17.96585,
+      18.05334,
+      18.12781,
+      18.20468,
+      18.28237,
+      18.36433,
+      18.44094,
+      18.5232,
+      18.59606,
+      18.66842,
+      18.7383,
+      18.81414,
+      18.8823,
+      18.94673,
+      19.01184,
+      19.0833,
+      19.14901,
+      19.21561,
+      19.27615,
+      19.34223,
+      19.40643,
+      19.46429,
+      19.52366,
+      19.58296,
+      19.63921,
+      19.7044,
+      19.76532,
+      19.82396,
+      19.88613,
+      19.94903,
+      20.01222,
+      20.06716,
+      20.13074,
+      20.18805,
+      20.23856,
+      20.28473,
+      20.33445,
+      20.39101,
+      20.44697,
+      20.51081,
+      20.5662,
+      20.61807,
+      20.6686,
+      20.72132,
+      20.77282,
+      20.82801,
+      20.8796,
+      20.93012,
+      20.98079,
+      21.03104,
+      21.07614,
+      21.11888,
+      21.16912,
+      21.21803,
+      21.26886,
+      21.31737,
+      21.36489,
+      21.41308,
+      21.46243,
+      21.50993,
+      21.55461,
+      21.61146,
+      21.66092,
+      21.7096,
+      21.75505,
+      21.80182,
+      21.85077,
+      21.89928,
+      21.9455,
+      21.99122,
+      22.04008,
+      22.08432,
+      22.12594,
+      22.17154,
+      22.21381,
+      22.26123,
+      22.30799,
+      22.35195,
+      22.39659,
+      22.43966,
+      22.48433,
+      22.52935,
+      22.56788,
+      22.61489,
+      22.65483,
+      22.69909,
+      22.73823,
+      22.78419,
+      22.83149,
+      22.8785,
+      22.92272,
+      22.9668,
+      23.01122,
+      23.05034,
+      23.0932,
+      23.1335,
+      23.17621,
+      23.21959,
+      23.25891,
+      23.29958,
+      23.34005,
+      23.37879,
+      23.42331,
+      23.46387,
+      23.51242,
+      23.55089,
+      23.58828,
+      23.63115,
+      23.67545,
+      23.71564,
+      23.7552,
+      23.79028,
+      23.83481,
+      23.87693,
+      23.91828,
+      23.95809,
+      23.99684,
+      24.03945,
+      24.07555,
+      24.11717,
+      24.15687,
+      24.19483,
+      24.23174,
+      24.27096,
+      24.31048,
+      24.34495,
+      24.38672,
+      24.42525,
+      24.46508,
+      24.50784,
+      24.54828,
+      24.58876,
+      24.62715,
+      24.66776,
+      24.70775,
+      24.74192,
+      24.77736,
+      24.81654,
+      24.8581,
+      24.89655,
+      24.94003,
+      24.97637,
+      25.01756,
+      25.05573,
+      25.09335,
+      25.13481,
+      25.17424,
+      25.21794,
+      25.25483,
+      25.28909,
+      25.32657,
+      25.36606,
+      25.3995,
+      25.43841,
+      25.47113,
+      25.50832,
+      25.54495,
+      25.58181,
+      25.62153,
+      25.65261,
+      25.68573,
+      25.7199,
+      25.7572,
+      25.79032,
+      25.82542,
+      25.86534,
+      25.90078,
+      25.93481,
+      25.97444,
+      26.01592,
+      26.05191,
+      26.09035,
+      26.12529,
+      26.15902,
+      26.19609,
+      26.23154,
+      26.26412,
+      26.30553,
+      26.33798,
+      26.37358,
+      26.40977,
+      26.44686,
+      26.48535,
+      26.52339,
+      26.55728,
+      26.59352,
+      26.63184,
+      26.66616,
+      26.70173,
+      26.73359,
+      26.7681,
+      26.80479,
+      26.84244,
+      26.87514,
+      26.90871,
+      26.94846,
+      26.98979,
+      27.02566,
+      27.05466,
+      27.08845,
+      27.12174,
+      27.15741,
+      27.19095,
+      27.22246,
+      27.25685,
+      27.28998,
+      27.33128,
+      27.37041,
+      27.4041,
+      27.43941,
+      27.47205,
+      27.51285,
+      27.547,
+      27.58393,
+      27.62319,
+      27.65826,
+      27.69581,
+      27.73268,
+      27.76868,
+      27.80404,
+      27.84052,
+      27.87545,
+      27.91169,
+      27.94479,
+      27.97823,
+      28.01122,
+      28.04835,
+      28.08559,
+      28.11949,
+      28.15047,
+      28.18849,
+      28.22546,
+      28.26355,
+      28.30091,
+      28.33369,
+      28.36686,
+      28.40232,
+      28.43541,
+      28.46912,
+      28.50314,
+      28.53534,
+      28.56706,
+      28.59733,
+      28.63043,
+      28.66096,
+      28.69712,
+      28.72841,
+      28.76599,
+      28.79884,
+      28.83546,
+      28.86704,
+      28.8988,
+      28.92965,
+      28.95824,
+      28.99524,
+      29.03166,
+      29.06378,
+      29.09296,
+      29.12731,
+      29.16007,
+      29.19344,
+      29.23173,
+      29.26774,
+      29.30672,
+      29.3399,
+      29.37946,
+      29.41448,
+      29.44865,
+      29.48127,
+      29.51543,
+      29.55282,
+      29.58906,
+      29.62216,
+      29.65049,
+      29.68424,
+      29.72028,
+      29.75261,
+      29.78735,
+      29.82055,
+      29.85596,
+      29.88869,
+      29.92438,
+      29.95784,
+      29.98943,
+      30.02197,
+      30.05579,
+      30.09025,
+      30.12293,
+      30.1558,
+      30.19022,
+      30.2208,
+      30.25351,
+      30.28788,
+      30.31792,
+      30.35021,
+      30.38268,
+      30.41453,
+      30.45426,
+      30.49284,
+      30.52762,
+      30.55985,
+      30.59327,
+      30.62267,
+      30.65599,
+      30.69242,
+      30.72951,
+      30.76167,
+      30.79837,
+      30.82891,
+      30.86374,
+      30.8964,
+      30.92975,
+      30.96681,
+      30.99971,
+      31.0292,
+      31.06241,
+      31.09224,
+      31.12907,
+      31.16332,
+      31.20274,
+      31.23618,
+      31.26972,
+      31.30926,
+      31.3465,
+      31.38317,
+      31.41601,
+      31.44735,
+      31.48036,
+      31.5103,
+      31.54799,
+      31.58053,
+      31.61623,
+      31.65338,
+      31.68428,
+      31.72258,
+      31.75983,
+      31.79197,
+      31.82245,
+      31.85883,
+      31.89317,
+      31.9278,
+      31.95835,
+      31.99177,
+      32.02778,
+      32.06077,
+      32.09601,
+      32.12989,
+      32.16412,
+      32.19983,
+      32.23404,
+      32.26589,
+      32.29694,
+      32.32589,
+      32.3599,
+      32.39938,
+      32.4339,
+      32.46718,
+      32.49907,
+      32.53724,
+      32.5709,
+      32.60469,
+      32.6384,
+      32.66924,
+      32.70156,
+      32.73572,
+      32.76945,
+      32.80061,
+      32.83431,
+      32.87091,
+      32.90338,
+      32.93815,
+      32.97311,
+      33.00617,
+      33.03986,
+      33.07209,
+      33.10708,
+      33.14387,
+      33.17358,
+      33.20936,
+      33.24391,
+      33.27643,
+      33.31034,
+      33.34692,
+      33.37866,
+      33.41539,
+      33.4484,
+      33.48129,
+      33.51694,
+      33.55268,
+      33.58526,
+      33.61901,
+      33.65001,
+      33.68301,
+      33.71966,
+      33.75723,
+      33.79188,
+      33.82821,
+      33.86406,
+      33.89675,
+      33.9312,
+      33.9665,
+      34.00125,
+      34.03579,
+      34.06754,
+      34.0979,
+      34.13226,
+      34.16476,
+      34.20002,
+      34.23305,
+      34.26772,
+      34.30422,
+      34.33723,
+      34.3698,
+      34.40609,
+      34.44989,
+      34.48635,
+      34.5214,
+      34.55468,
+      34.5832,
+      34.61868,
+      34.65491,
+      34.69271,
+      34.72926,
+      34.76699,
+      34.80152,
+      34.83522,
+      34.8699,
+      34.90517,
+      34.94229,
+      34.97397,
+      35.01088,
+      35.04106,
+      35.07876,
+      35.10862,
+      35.14723,
+      35.18592,
+      35.21623,
+      35.25081,
+      35.28562,
+      35.32238,
+      35.35512,
+      35.39127,
+      35.42562,
+      35.45831,
+      35.493,
+      35.52973,
+      35.56675,
+      35.60108,
+      35.63549,
+      35.67068,
+      35.71065,
+      35.74473,
+      35.77836,
+      35.80829,
+      35.84135,
+      35.87676,
+      35.91117,
+      35.93957,
+      35.97526,
+      36.00744,
+      36.04392,
+      36.07981,
+      36.11722,
+      36.14916,
+      36.1914,
+      36.22526,
+      36.25869,
+      36.29301,
+      36.32545,
+      36.3616,
+      36.39082,
+      36.42414,
+      36.45444,
+      36.4886,
+      36.52561,
+      36.55654,
+      36.59031,
+      36.62267,
+      36.65931,
+      36.69415,
+      36.72714,
+      36.76046,
+      36.79792,
+      36.83289,
+      36.86828,
+      36.90492,
+      36.94427,
+      36.97561,
+      37.01173,
+      37.04528,
+      37.08792,
+      37.12311,
+      37.15943,
+      37.19836,
+      37.23357,
+      37.26611,
+      37.29807,
+      37.32862,
+      37.36737,
+      37.4039,
+      37.44022,
+      37.47467,
+      37.51274,
+      37.54733,
+      37.58622,
+      37.61651,
+      37.64962,
+      37.68998,
+      37.72559,
+      37.75957,
+      37.79696,
+      37.83224,
+      37.8679,
+      37.90475,
+      37.9452,
+      37.9805,
+      38.02083,
+      38.05627,
+      38.0931,
+      38.1344,
+      38.16801,
+      38.20156,
+      38.23623,
+      38.2722,
+      38.30689,
+      38.34612,
+      38.38912,
+      38.42348,
+      38.45727,
+      38.49176,
+      38.5304,
+      38.57222,
+      38.60974,
+      38.64218,
+      38.68112,
+      38.71871,
+      38.75457,
+      38.79496,
+      38.83142,
+      38.87239,
+      38.92039,
+      38.95925,
+      38.99576,
+      39.0315,
+      39.06499,
+      39.10088,
+      39.13506,
+      39.17374,
+      39.20996,
+      39.25047,
+      39.28871,
+      39.32826,
+      39.3637,
+      39.39969,
+      39.43171,
+      39.47022,
+      39.50949,
+      39.54527,
+      39.58546,
+      39.62314,
+      39.65965,
+      39.69829,
+      39.73855,
+      39.77497,
+      39.81208,
+      39.85217,
+      39.8904,
+      39.92465,
+      39.96165,
+      40.00587,
+      40.04363,
+      40.08563,
+      40.12467,
+      40.16176,
+      40.20146,
+      40.23723,
+      40.27448,
+      40.30872,
+      40.34676,
+      40.39017,
+      40.42446,
+      40.46257,
+      40.50344,
+      40.53973,
+      40.57493,
+      40.61263,
+      40.65253,
+      40.69379,
+      40.73201,
+      40.77355,
+      40.81291,
+      40.85302,
+      40.89196,
+      40.93268,
+      40.97161,
+      41.01134,
+      41.05115,
+      41.09042,
+      41.13058,
+      41.16907,
+      41.21207,
+      41.25442,
+      41.29624,
+      41.33664,
+      41.37661,
+      41.41575,
+      41.45796,
+      41.50254,
+      41.54048,
+      41.58227,
+      41.61916,
+      41.65593,
+      41.69385,
+      41.73301,
+      41.76875,
+      41.80773,
+      41.84124,
+      41.87922,
+      41.92283,
+      41.96575,
+      42.00738,
+      42.05221,
+      42.09524,
+      42.13467,
+      42.17809,
+      42.21705,
+      42.25753,
+      42.2989,
+      42.34115,
+      42.38637,
+      42.42408,
+      42.46417,
+      42.50252,
+      42.54744,
+      42.59023,
+      42.63471,
+      42.67461,
+      42.7206,
+      42.75838,
+      42.79712,
+      42.83528,
+      42.87687,
+      42.91803,
+      42.95417,
+      42.99422,
+      43.03901,
+      43.08746,
+      43.12848,
+      43.17173,
+      43.22055,
+      43.2615,
+      43.31122,
+      43.35348,
+      43.39477,
+      43.43679,
+      43.48163,
+      43.52716,
+      43.57279,
+      43.61786,
+      43.66176,
+      43.70748,
+      43.75463,
+      43.79775,
+      43.84273,
+      43.88761,
+      43.93545,
+      43.97253,
+      44.0185,
+      44.06079,
+      44.10588,
+      44.14933,
+      44.1939,
+      44.23798,
+      44.28021,
+      44.32269,
+      44.3681,
+      44.41642,
+      44.46262,
+      44.50737,
+      44.5489,
+      44.59091,
+      44.62551,
+      44.66744,
+      44.71367,
+      44.75999,
+      44.80604,
+      44.85761,
+      44.90278,
+      44.95287,
+      44.99636,
+      45.0436,
+      45.09145,
+      45.14083,
+      45.18461,
+      45.23139,
+      45.28263,
+      45.33058,
+      45.37713,
+      45.42279,
+      45.47172,
+      45.52388,
+      45.57145,
+      45.6151,
+      45.66213,
+      45.7067,
+      45.75456,
+      45.80612,
+      45.85057,
+      45.90377,
+      45.95791,
+      46.01021,
+      46.05629,
+      46.10233,
+      46.15039,
+      46.19802,
+      46.25002,
+      46.29956,
+      46.35705,
+      46.40639,
+      46.45719,
+      46.5021,
+      46.55202,
+      46.60076,
+      46.64627,
+      46.69476,
+      46.7507,
+      46.8053,
+      46.85271,
+      46.90262,
+      46.94424,
+      46.99665,
+      47.04729,
+      47.10301,
+      47.15829,
+      47.21788,
+      47.27045,
+      47.328,
+      47.38111,
+      47.43438,
+      47.48626,
+      47.54011,
+      47.59533,
+      47.64905,
+      47.69527,
+      47.74077,
+      47.79201,
+      47.842,
+      47.89384,
+      47.94637,
+      48.00155,
+      48.0567,
+      48.11581,
+      48.16847,
+      48.22539,
+      48.28848,
+      48.34089,
+      48.39206,
+      48.45666,
+      48.5151,
+      48.57549,
+      48.6322,
+      48.68447,
+      48.73277,
+      48.7915,
+      48.84558,
+      48.9062,
+      48.95949,
+      49.0238,
+      49.08464,
+      49.14793,
+      49.21944,
+      49.28138,
+      49.33796,
+      49.40504,
+      49.45779,
+      49.51903,
+      49.57528,
+      49.64628,
+      49.70428,
+      49.76673,
+      49.82497,
+      49.89383,
+      49.95372,
+      50.01646,
+      50.0837,
+      50.14724,
+      50.21619,
+      50.27693,
+      50.34268,
+      50.4074,
+      50.47445,
+      50.54041,
+      50.60607,
+      50.6724,
+      50.72943,
+      50.79053,
+      50.85342,
+      50.92365,
+      50.99064,
+      51.0632,
+      51.1214,
+      51.19355,
+      51.26508,
+      51.33105,
+      51.39784,
+      51.46966,
+      51.53738,
+      51.5979,
+      51.67277,
+      51.73764,
+      51.81174,
+      51.87855,
+      51.95361,
+      52.02525,
+      52.0945,
+      52.16521,
+      52.24237,
+      52.32601,
+      52.40174,
+      52.47285,
+      52.54994,
+      52.63193,
+      52.72092,
+      52.80324,
+      52.87961,
+      52.96094,
+      53.04524,
+      53.12147,
+      53.20191,
+      53.27408,
+      53.34739,
+      53.43767,
+      53.50987,
+      53.58224,
+      53.66698,
+      53.74404,
+      53.83062,
+      53.91415,
+      53.99205,
+      54.09102,
+      54.17464,
+      54.26025,
+      54.36398,
+      54.45456,
+      54.54843,
+      54.6345,
+      54.73512,
+      54.81663,
+      54.89747,
+      54.98833,
+      55.06588,
+      55.16116,
+      55.25993,
+      55.35933,
+      55.46488,
+      55.56565,
+      55.66937,
+      55.75603,
+      55.84443,
+      55.9472,
+      56.04563,
+      56.15029,
+      56.2426,
+      56.34582,
+      56.45599,
+      56.56944,
+      56.68479,
+      56.79295,
+      56.91487,
+      57.03106,
+      57.13561,
+      57.2521,
+      57.37262,
+      57.48416,
+      57.60948,
+      57.73753,
+      57.8475,
+      57.96953,
+      58.09177,
+      58.21237,
+      58.34392,
+      58.48865,
+      58.62247,
+      58.75291,
+      58.87782,
+      59.00471,
+      59.15872,
+      59.28201,
+      59.43614,
+      59.58547,
+      59.74,
+      59.8991,
+      60.0503,
+      60.19808,
+      60.35962,
+      60.52343,
+      60.70491,
+      60.87641,
+      61.04206,
+      61.22478,
+      61.40184,
+      61.56762,
+      61.72251,
+      61.90725,
+      62.11139,
+      62.32156,
+      62.52281,
+      62.73329,
+      62.92667,
+      63.15705,
+      63.35402,
+      63.54428,
+      63.74382,
+      63.98628,
+      64.22228,
+      64.48529,
+      64.76125,
+      65.02876,
+      65.30791,
+      65.60794,
+      65.90388,
+      66.16497,
+      66.46573,
+      66.75136,
+      67.0587,
+      67.38694,
+      67.74123,
+      68.09369,
+      68.52127,
+      68.91123,
+      69.34587,
+      69.74677,
+      70.2115,
+      70.65266,
+      71.0922,
+      71.56401,
+      72.03263,
+      72.53726,
+      73.12406,
+      73.7538,
+      74.43148,
+      75.10208,
+      75.87148,
+      76.74629,
+      77.65641,
+      78.67435,
+      79.57336,
+      80.72681,
+      81.95992,
+      83.49382,
+      85.15406,
+      87.21294,
+      89.60091,
+      92.40804,
+      96.09622,
+      112.3014
+    ],
+    "percent_formula": "100 * (1 - F(distance)) where F is the empirical CDF of distances between 200,000 random player-season pairs",
+    "n_neighbors_stored": 40
+  },
+  "time_machine": {
+    "features": [
+      "goals_per_match",
+      "shots_per_team_match",
+      "xg_per_shot",
+      "passes_per_team_match",
+      "pass_completion",
+      "long_ball_share",
+      "progressive_passes_per_team_match",
+      "progressive_carries_per_team_match",
+      "dribbles_per_team_match",
+      "pressures_per_team_match",
+      "counterpressures_per_team_match",
+      "tackles_per_team_match",
+      "interceptions_per_team_match",
+      "clearances_per_team_match",
+      "high_turnovers_per_team_match",
+      "fouls_committed_per_team_match",
+      "touches_penalty_area_per_team_match",
+      "possession_imbalance"
+    ],
+    "feature_labels": {
+      "goals_per_match": "Goals per match",
+      "shots_per_team_match": "Shots per team-match",
+      "xg_per_shot": "xG per shot",
+      "passes_per_team_match": "Passes per team-match",
+      "pass_completion": "Pass completion",
+      "long_ball_share": "Long-ball share",
+      "progressive_passes_per_team_match": "Progressive passes per team-match",
+      "progressive_carries_per_team_match": "Progressive carries per team-match",
+      "dribbles_per_team_match": "Take-ons per team-match",
+      "pressures_per_team_match": "Pressures per team-match",
+      "counterpressures_per_team_match": "Counterpressures per team-match",
+      "tackles_per_team_match": "Tackles per team-match",
+      "interceptions_per_team_match": "Interceptions per team-match",
+      "clearances_per_team_match": "Clearances per team-match",
+      "high_turnovers_per_team_match": "High turnovers per team-match",
+      "fouls_committed_per_team_match": "Fouls per team-match",
+      "touches_penalty_area_per_team_match": "Penalty-area touches per team-match",
+      "possession_imbalance": "Possession imbalance"
+    },
+    "n_seasons": 33,
+    "min_matches": 6,
+    "scaler": {
+      "mean": [
+        3.0452,
+        12.485,
+        0.1118,
+        509.2057,
+        0.807,
+        0.1886,
+        59.6463,
+        28.9307,
+        19.2118,
+        156.1354,
+        31.2104,
+        19.0125,
+        6.9298,
+        20.8984,
+        10.1319,
+        15.6462,
+        34.6224,
+        0.1262
+      ],
+      "scale": [
+        0.5298,
+        0.6992,
+        0.0115,
+        45.6629,
+        0.0402,
+        0.0294,
+        6.5358,
+        3.0666,
+        4.0223,
+        16.3642,
+        3.1866,
+        2.3286,
+        1.5045,
+        4.7767,
+        0.9235,
+        2.5508,
+        4.3636,
+        0.0364
+      ]
+    },
+    "pca": {
+      "n_components": 5,
+      "explained_variance_ratio": [
+        0.3632,
+        0.2276,
+        0.1285,
+        0.0686,
+        0.0506
+      ],
+      "loadings": {
+        "pc1": {
+          "goals_per_match": 0.1915,
+          "shots_per_team_match": 0.0671,
+          "xg_per_shot": 0.1672,
+          "passes_per_team_match": 0.3565,
+          "pass_completion": 0.3492,
+          "long_ball_share": -0.3536,
+          "progressive_passes_per_team_match": 0.3397,
+          "progressive_carries_per_team_match": 0.2701,
+          "dribbles_per_team_match": -0.0209,
+          "pressures_per_team_match": 0.1999,
+          "counterpressures_per_team_match": 0.0153,
+          "tackles_per_team_match": -0.1464,
+          "interceptions_per_team_match": 0.1267,
+          "clearances_per_team_match": -0.2925,
+          "high_turnovers_per_team_match": 0.0391,
+          "fouls_committed_per_team_match": -0.2473,
+          "touches_penalty_area_per_team_match": 0.3447,
+          "possession_imbalance": 0.1523
+        },
+        "pc2": {
+          "goals_per_match": 0.3266,
+          "shots_per_team_match": -0.1786,
+          "xg_per_shot": -0.0222,
+          "passes_per_team_match": 0.064,
+          "pass_completion": -0.0136,
+          "long_ball_share": 0.0042,
+          "progressive_passes_per_team_match": 0.1567,
+          "progressive_carries_per_team_match": 0.2773,
+          "dribbles_per_team_match": 0.4598,
+          "pressures_per_team_match": -0.0081,
+          "counterpressures_per_team_match": 0.0768,
+          "tackles_per_team_match": 0.3475,
+          "interceptions_per_team_match": -0.1035,
+          "clearances_per_team_match": 0.2161,
+          "high_turnovers_per_team_match": -0.312,
+          "fouls_committed_per_team_match": 0.3277,
+          "touches_penalty_area_per_team_match": -0.059,
+          "possession_imbalance": 0.3892
+        },
+        "pc3": {
+          "goals_per_match": 0.1267,
+          "shots_per_team_match": 0.2803,
+          "xg_per_shot": -0.1718,
+          "passes_per_team_match": -0.0547,
+          "pass_completion": -0.2408,
+          "long_ball_share": 0.1514,
+          "progressive_passes_per_team_match": 0.0034,
+          "progressive_carries_per_team_match": 0.1169,
+          "dribbles_per_team_match": 0.0858,
+          "pressures_per_team_match": 0.4417,
+          "counterpressures_per_team_match": 0.5731,
+          "tackles_per_team_match": 0.2215,
+          "interceptions_per_team_match": 0.2442,
+          "clearances_per_team_match": 0.0312,
+          "high_turnovers_per_team_match": 0.3425,
+          "fouls_committed_per_team_match": -0.0253,
+          "touches_penalty_area_per_team_match": 0.0705,
+          "possession_imbalance": -0.122
+        },
+        "pc4": {
+          "goals_per_match": 0.067,
+          "shots_per_team_match": 0.4712,
+          "xg_per_shot": -0.4374,
+          "passes_per_team_match": -0.0072,
+          "pass_completion": 0.0558,
+          "long_ball_share": 0.0061,
+          "progressive_passes_per_team_match": 0.0285,
+          "progressive_carries_per_team_match": 0.159,
+          "dribbles_per_team_match": 0.1572,
+          "pressures_per_team_match": -0.3832,
+          "counterpressures_per_team_match": -0.3608,
+          "tackles_per_team_match": 0.0874,
+          "interceptions_per_team_match": 0.4888,
+          "clearances_per_team_match": -0.0213,
+          "high_turnovers_per_team_match": -0.0169,
+          "fouls_committed_per_team_match": 0.0046,
+          "touches_penalty_area_per_team_match": 0.0074,
+          "possession_imbalance": -0.0616
+        },
+        "pc5": {
+          "goals_per_match": 0.3408,
+          "shots_per_team_match": 0.2088,
+          "xg_per_shot": 0.6556,
+          "passes_per_team_match": -0.2708,
+          "pass_completion": -0.0428,
+          "long_ball_share": 0.1589,
+          "progressive_passes_per_team_match": -0.1363,
+          "progressive_carries_per_team_match": -0.2387,
+          "dribbles_per_team_match": 0.073,
+          "pressures_per_team_match": -0.0657,
+          "counterpressures_per_team_match": 0.0074,
+          "tackles_per_team_match": -0.1111,
+          "interceptions_per_team_match": 0.3674,
+          "clearances_per_team_match": -0.1216,
+          "high_turnovers_per_team_match": -0.1456,
+          "fouls_committed_per_team_match": 0.155,
+          "touches_penalty_area_per_team_match": 0.1181,
+          "possession_imbalance": 0.0595
+        }
+      }
+    },
+    "clustering": {
+      "candidates": [
+        {
+          "id": "kmeans_k2",
+          "algorithm": "KMeans",
+          "params": {
+            "n_clusters": 2,
+            "n_init": 20
+          },
+          "k": 2,
+          "silhouette": 0.2256,
+          "davies_bouldin": 1.5749,
+          "calinski_harabasz": 11.88,
+          "sizes": [
+            18,
+            15
+          ],
+          "noise": 0,
+          "min_size_share": 0.4545,
+          "inertia": 429.44,
+          "eligible": true
+        },
+        {
+          "id": "agglomerative_ward_k2",
+          "algorithm": "Agglomerative (Ward)",
+          "params": {
+            "n_clusters": 2,
+            "linkage": "ward"
+          },
+          "k": 2,
+          "silhouette": 0.2027,
+          "davies_bouldin": 1.5419,
+          "calinski_harabasz": 10.94,
+          "sizes": [
+            20,
+            13
+          ],
+          "noise": 0,
+          "min_size_share": 0.3939,
+          "eligible": true
+        },
+        {
+          "id": "kmeans_k3",
+          "algorithm": "KMeans",
+          "params": {
+            "n_clusters": 3,
+            "n_init": 20
+          },
+          "k": 3,
+          "silhouette": 0.2246,
+          "davies_bouldin": 1.3032,
+          "calinski_harabasz": 10.92,
+          "sizes": [
+            12,
+            10,
+            11
+          ],
+          "noise": 0,
+          "min_size_share": 0.303,
+          "inertia": 343.76,
+          "eligible": true
+        },
+        {
+          "id": "agglomerative_ward_k3",
+          "algorithm": "Agglomerative (Ward)",
+          "params": {
+            "n_clusters": 3,
+            "linkage": "ward"
+          },
+          "k": 3,
+          "silhouette": 0.2072,
+          "davies_bouldin": 1.4371,
+          "calinski_harabasz": 10.06,
+          "sizes": [
+            14,
+            13,
+            6
+          ],
+          "noise": 0,
+          "min_size_share": 0.1818,
+          "eligible": true
+        },
+        {
+          "id": "kmeans_k4",
+          "algorithm": "KMeans",
+          "params": {
+            "n_clusters": 4,
+            "n_init": 20
+          },
+          "k": 4,
+          "silhouette": 0.2029,
+          "davies_bouldin": 1.3494,
+          "calinski_harabasz": 9.8,
+          "sizes": [
+            9,
+            6,
+            6,
+            12
+          ],
+          "noise": 0,
+          "min_size_share": 0.1818,
+          "inertia": 294.95,
+          "eligible": true
+        },
+        {
+          "id": "agglomerative_ward_k4",
+          "algorithm": "Agglomerative (Ward)",
+          "params": {
+            "n_clusters": 4,
+            "linkage": "ward"
+          },
+          "k": 4,
+          "silhouette": 0.2135,
+          "davies_bouldin": 1.3968,
+          "calinski_harabasz": 9.23,
+          "sizes": [
+            13,
+            8,
+            6,
+            6
+          ],
+          "noise": 0,
+          "min_size_share": 0.1818,
+          "eligible": true
+        },
+        {
+          "id": "kmeans_k5",
+          "algorithm": "KMeans",
+          "params": {
+            "n_clusters": 5,
+            "n_init": 20
+          },
+          "k": 5,
+          "silhouette": 0.233,
+          "davies_bouldin": 1.2619,
+          "calinski_harabasz": 10.01,
+          "sizes": [
+            9,
+            4,
+            8,
+            7,
+            5
+          ],
+          "noise": 0,
+          "min_size_share": 0.1212,
+          "inertia": 244.5,
+          "eligible": true
+        },
+        {
+          "id": "agglomerative_ward_k5",
+          "algorithm": "Agglomerative (Ward)",
+          "params": {
+            "n_clusters": 5,
+            "linkage": "ward"
+          },
+          "k": 5,
+          "silhouette": 0.2042,
+          "davies_bouldin": 1.3244,
+          "calinski_harabasz": 9.32,
+          "sizes": [
+            6,
+            8,
+            7,
+            6,
+            6
+          ],
+          "noise": 0,
+          "min_size_share": 0.1818,
+          "eligible": true
+        },
+        {
+          "id": "kmeans_k6",
+          "algorithm": "KMeans",
+          "params": {
+            "n_clusters": 6,
+            "n_init": 20
+          },
+          "k": 6,
+          "silhouette": 0.2193,
+          "davies_bouldin": 1.0987,
+          "calinski_harabasz": 9.64,
+          "sizes": [
+            7,
+            6,
+            9,
+            5,
+            5,
+            1
+          ],
+          "noise": 0,
+          "min_size_share": 0.0303,
+          "inertia": 213.33,
+          "eligible": false
+        },
+        {
+          "id": "agglomerative_ward_k6",
+          "algorithm": "Agglomerative (Ward)",
+          "params": {
+            "n_clusters": 6,
+            "linkage": "ward"
+          },
+          "k": 6,
+          "silhouette": 0.2093,
+          "davies_bouldin": 1.1527,
+          "calinski_harabasz": 9.18,
+          "sizes": [
+            8,
+            6,
+            7,
+            5,
+            6,
+            1
+          ],
+          "noise": 0,
+          "min_size_share": 0.0303,
+          "eligible": false
+        },
+        {
+          "id": "dbscan_eps2.0",
+          "algorithm": "DBSCAN",
+          "params": {
+            "eps": 2.0,
+            "min_samples": 3
+          },
+          "k": 0,
+          "silhouette": null,
+          "davies_bouldin": null,
+          "calinski_harabasz": null,
+          "sizes": [],
+          "noise": 33,
+          "min_size_share": 0.0,
+          "eligible": false
+        },
+        {
+          "id": "dbscan_eps2.5",
+          "algorithm": "DBSCAN",
+          "params": {
+            "eps": 2.5,
+            "min_samples": 3
+          },
+          "k": 1,
+          "silhouette": null,
+          "davies_bouldin": null,
+          "calinski_harabasz": null,
+          "sizes": [
+            6
+          ],
+          "noise": 27,
+          "min_size_share": 0.0,
+          "eligible": false
+        },
+        {
+          "id": "dbscan_eps3.0",
+          "algorithm": "DBSCAN",
+          "params": {
+            "eps": 3.0,
+            "min_samples": 3
+          },
+          "k": 4,
+          "silhouette": 0.2743,
+          "davies_bouldin": 1.0822,
+          "calinski_harabasz": 9.07,
+          "sizes": [
+            3,
+            6,
+            4,
+            4
+          ],
+          "noise": 16,
+          "min_size_share": 0.1765,
+          "eligible": false
+        },
+        {
+          "id": "dbscan_eps3.5",
+          "algorithm": "DBSCAN",
+          "params": {
+            "eps": 3.5,
+            "min_samples": 3
+          },
+          "k": 2,
+          "silhouette": 0.2391,
+          "davies_bouldin": 1.2435,
+          "calinski_harabasz": 7.24,
+          "sizes": [
+            19,
+            5
+          ],
+          "noise": 9,
+          "min_size_share": 0.2083,
+          "eligible": false
+        },
+        {
+          "id": "dbscan_eps4.0",
+          "algorithm": "DBSCAN",
+          "params": {
+            "eps": 4.0,
+            "min_samples": 3
+          },
+          "k": 1,
+          "silhouette": null,
+          "davies_bouldin": null,
+          "calinski_harabasz": null,
+          "sizes": [
+            28
+          ],
+          "noise": 5,
+          "min_size_share": 0.0,
+          "eligible": false
+        }
+      ],
+      "selected": {
+        "id": "kmeans_k5",
+        "algorithm": "KMeans",
+        "params": {
+          "n_clusters": 5,
+          "n_init": 20
+        },
+        "k": 5,
+        "silhouette": 0.233,
+        "davies_bouldin": 1.2619,
+        "calinski_harabasz": 10.01,
+        "sizes": [
+          9,
+          4,
+          8,
+          7,
+          5
+        ],
+        "noise": 0,
+        "min_size_share": 0.1212,
+        "inertia": 244.5,
+        "eligible": true
+      },
+      "selection_rule": "highest silhouette among eligible candidates with 3-6 clusters (min cluster share 8%, \u226410% DBSCAN noise); Davies-Bouldin breaks ties",
+      "clusters": [
+        {
+          "cluster": 0,
+          "size": 9,
+          "year_range": [
+            2017,
+            2023
+          ],
+          "high": [
+            "Pass completion",
+            "Penalty-area touches per team-match",
+            "Passes per team-match"
+          ],
+          "low": [
+            "Clearances per team-match",
+            "Long-ball share"
+          ],
+          "members": [
+            "La Liga 2017/18",
+            "FIFA World Cup 2018",
+            "La Liga 2018/19",
+            "La Liga 2019/20",
+            "La Liga 2020/21",
+            "UEFA Euro 2020",
+            "Ligue 1 2021/22",
+            "Ligue 1 2022/23",
+            "1. Bundesliga 2023/24"
+          ],
+          "centroid": {
+            "goals_per_match": 0.232,
+            "shots_per_team_match": 0.536,
+            "xg_per_shot": 0.485,
+            "passes_per_team_match": 0.942,
+            "pass_completion": 0.983,
+            "long_ball_share": -1.001,
+            "progressive_passes_per_team_match": 0.817,
+            "progressive_carries_per_team_match": 0.365,
+            "dribbles_per_team_match": -0.551,
+            "pressures_per_team_match": 0.498,
+            "counterpressures_per_team_match": -0.152,
+            "tackles_per_team_match": -0.915,
+            "interceptions_per_team_match": 0.709,
+            "clearances_per_team_match": -1.053,
+            "high_turnovers_per_team_match": -0.006,
+            "fouls_committed_per_team_match": -0.848,
+            "touches_penalty_area_per_team_match": 0.972,
+            "possession_imbalance": -0.051
+          },
+          "name": "High-completion, box-dominant football (2017\u20132023)"
+        },
+        {
+          "cluster": 1,
+          "size": 4,
+          "year_range": [
+            2004,
+            2007
+          ],
+          "high": [
+            "Fouls per team-match",
+            "Clearances per team-match",
+            "Take-ons per team-match"
+          ],
+          "low": [
+            "Penalty-area touches per team-match",
+            "High turnovers per team-match"
+          ],
+          "members": [
+            "La Liga 2004/05",
+            "La Liga 2005/06",
+            "La Liga 2006/07",
+            "La Liga 2007/08"
+          ],
+          "centroid": {
+            "goals_per_match": -0.036,
+            "shots_per_team_match": 0.05,
+            "xg_per_shot": -0.851,
+            "passes_per_team_match": -0.885,
+            "pass_completion": -0.633,
+            "long_ball_share": 0.648,
+            "progressive_passes_per_team_match": -0.891,
+            "progressive_carries_per_team_match": -0.271,
+            "dribbles_per_team_match": 1.263,
+            "pressures_per_team_match": -1.279,
+            "counterpressures_per_team_match": -0.769,
+            "tackles_per_team_match": 1.088,
+            "interceptions_per_team_match": -0.325,
+            "clearances_per_team_match": 1.296,
+            "high_turnovers_per_team_match": -1.445,
+            "fouls_committed_per_team_match": 1.958,
+            "touches_penalty_area_per_team_match": -1.497,
+            "possession_imbalance": 0.224
+          },
+          "name": "Foul-heavy, clearance-heavy football (2004\u20132007)"
+        },
+        {
+          "cluster": 2,
+          "size": 8,
+          "year_range": [
+            2008,
+            2016
+          ],
+          "high": [
+            "Possession imbalance",
+            "Goals per match",
+            "Take-ons per team-match"
+          ],
+          "low": [
+            "Shots per team-match",
+            "Interceptions per team-match"
+          ],
+          "members": [
+            "La Liga 2008/09",
+            "La Liga 2009/10",
+            "La Liga 2010/11",
+            "La Liga 2011/12",
+            "La Liga 2012/13",
+            "La Liga 2013/14",
+            "La Liga 2014/15",
+            "La Liga 2016/17"
+          ],
+          "centroid": {
+            "goals_per_match": 1.182,
+            "shots_per_team_match": -0.528,
+            "xg_per_shot": 0.37,
+            "passes_per_team_match": 0.402,
+            "pass_completion": 0.235,
+            "long_ball_share": -0.175,
+            "progressive_passes_per_team_match": 0.783,
+            "progressive_carries_per_team_match": 0.978,
+            "dribbles_per_team_match": 1.138,
+            "pressures_per_team_match": 0.376,
+            "counterpressures_per_team_match": 0.418,
+            "tackles_per_team_match": 0.667,
+            "interceptions_per_team_match": -0.361,
+            "clearances_per_team_match": 0.272,
+            "high_turnovers_per_team_match": -0.351,
+            "fouls_committed_per_team_match": 0.38,
+            "touches_penalty_area_per_team_match": 0.407,
+            "possession_imbalance": 1.428
+          },
+          "name": "Lopsided, high-scoring football (2008\u20132016)"
+        },
+        {
+          "cluster": 3,
+          "size": 7,
+          "year_range": [
+            2003,
+            2021
+          ],
+          "high": [
+            "Long-ball share",
+            "Counterpressures per team-match",
+            "High turnovers per team-match"
+          ],
+          "low": [
+            "Pass completion",
+            "Possession imbalance"
+          ],
+          "members": [
+            "Premier League 2003/04",
+            "1. Bundesliga 2015/16",
+            "Ligue 1 2015/16",
+            "La Liga 2015/16",
+            "Serie A 2015/16",
+            "Premier League 2015/16",
+            "Indian Super league 2021/22"
+          ],
+          "centroid": {
+            "goals_per_match": -0.612,
+            "shots_per_team_match": 0.119,
+            "xg_per_shot": -1.01,
+            "passes_per_team_match": -0.827,
+            "pass_completion": -1.371,
+            "long_ball_share": 1.157,
+            "progressive_passes_per_team_match": -0.853,
+            "progressive_carries_per_team_match": -0.624,
+            "dribbles_per_team_match": -0.427,
+            "pressures_per_team_match": 0.195,
+            "counterpressures_per_team_match": 0.911,
+            "tackles_per_team_match": 0.456,
+            "interceptions_per_team_match": 0.278,
+            "clearances_per_team_match": 0.636,
+            "high_turnovers_per_team_match": 0.834,
+            "fouls_committed_per_team_match": -0.06,
+            "touches_penalty_area_per_team_match": -0.665,
+            "possession_imbalance": -1.105
+          },
+          "name": "Direct, counter-pressing football (2003\u20132021)"
+        },
+        {
+          "cluster": 4,
+          "size": 5,
+          "year_range": [
+            2022,
+            2024
+          ],
+          "high": [
+            "xG per shot",
+            "High turnovers per team-match"
+          ],
+          "low": [
+            "Goals per match",
+            "Take-ons per team-match"
+          ],
+          "members": [
+            "FIFA World Cup 2022",
+            "African Cup of Nations 2023",
+            "Major League Soccer 2023",
+            "Copa America 2024",
+            "UEFA Euro 2024"
+          ],
+          "centroid": {
+            "goals_per_match": -1.423,
+            "shots_per_team_match": -0.327,
+            "xg_per_shot": 0.629,
+            "passes_per_team_match": -0.471,
+            "pass_completion": 0.28,
+            "long_ball_share": -0.056,
+            "progressive_passes_per_team_match": -0.817,
+            "progressive_carries_per_team_match": -1.133,
+            "dribbles_per_team_match": -1.242,
+            "pressures_per_team_match": -0.747,
+            "counterpressures_per_team_match": -1.055,
+            "tackles_per_team_match": -0.928,
+            "interceptions_per_team_match": -0.827,
+            "clearances_per_team_match": -0.467,
+            "high_turnovers_per_team_match": 0.561,
+            "fouls_committed_per_team_match": -0.563,
+            "touches_penalty_area_per_team_match": -0.272,
+            "possession_imbalance": -0.824
+          },
+          "name": "High-shot-quality, transition-heavy football (2022\u20132024)"
+        }
+      ]
+    },
+    "excluded_seasons": [
+      "Champions League 2018/19",
+      "Champions League 2017/18",
+      "Champions League 2016/17",
+      "Champions League 2015/16",
+      "Champions League 2014/15",
+      "Champions League 2013/14",
+      "Champions League 2012/13",
+      "Champions League 2011/12",
+      "Champions League 2010/11",
+      "Champions League 2009/10",
+      "Champions League 2008/09",
+      "Champions League 2006/07",
+      "Champions League 2004/05",
+      "Champions League 2003/04",
+      "Champions League 1999/00",
+      "Champions League 1972/73",
+      "Champions League 1971/72",
+      "Champions League 1970/71",
+      "La Liga 1973/74",
+      "Serie A 1986/87"
+    ]
+  },
+  "parameters": {
+    "kmeans_n_init": 20,
+    "agglomerative_linkage": "ward",
+    "dbscan_min_samples": 10,
+    "similarity_k_eval": 5,
+    "pca_random_state": 42
+  }
+}
