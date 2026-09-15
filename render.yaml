@@ -1,0 +1,16 @@
+# Render Blueprint — deploys Football Time Machine as a free Docker web service.
+# Dashboard → New → Blueprint → pick this repo, or create a Web Service manually
+# with Runtime = Docker (the Dockerfile handles everything).
+services:
+  - type: web
+    name: football-time-machine
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: WEB_CONCURRENCY
+        value: "1"

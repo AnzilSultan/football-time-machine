@@ -1,4 +1,4 @@
-# Football Time Machine — production image (Hugging Face Spaces / Render / Fly / any Docker host)
+# Football Time Machine — production image (Render / Koyeb / any Docker host)
 #
 # The image ships the pre-built dataset and ML artifacts from backend/data
 # (processed, metadata, artifacts) so no StatsBomb download happens at deploy
@@ -28,7 +28,7 @@ COPY backend/ ./backend/
 COPY start.py setup.py README.md METHODOLOGY.md LIMITATIONS.md DATA_SOURCES.md LICENSES.md ./
 COPY --from=frontend /app/frontend/dist ./frontend/dist
 
-# Hugging Face Spaces runs as a non-root user with uid 1000
+# run as a non-root user
 RUN useradd -m -u 1000 app && chown -R app:app /app
 USER app
 

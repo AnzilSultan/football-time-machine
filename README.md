@@ -77,7 +77,7 @@ python backend/tests/browser_check.py        # Playwright: every route on deskto
 * [METHODOLOGY.md](METHODOLOGY.md) – metric definitions, normalisation, features, PCA, clustering, similarity, era translation, scores
 * [LIMITATIONS.md](LIMITATIONS.md) – what this can and cannot claim
 * [LICENSES.md](LICENSES.md) – code and data licenses
-* [DEPLOY.md](DEPLOY.md) – free hosting on Hugging Face Spaces (Docker) and alternatives
+* [DEPLOY.md](DEPLOY.md) – free hosting on Render (Docker) and alternatives
 
 ## Reproducibility
 

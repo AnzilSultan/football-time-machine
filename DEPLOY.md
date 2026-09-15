@@ -3,7 +3,9 @@
 The app is a single container: FastAPI serves the API **and** the built React
 frontend. The processed dataset and trained ML artifacts (`backend/data/processed`,
 `backend/data/metadata`, `backend/data/artifacts`, ~40 MB) are committed to the
-repo so the deploy never has to download StatsBomb data. Raw data is git-ignored.
+repo, so a deploy never downloads StatsBomb data — it only installs dependencies,
+builds the frontend and serves. Raw data is git-ignored. The running server needs
+about 370 MB of RAM.
 
 ## 1. Put the code on GitHub
 
@@ -12,56 +14,43 @@ cd football-time-machine
 git init
 git add .
 git commit -m "Football Time Machine"
-# create an empty repo on github.com, then:
+# create an empty repo on github.com (no README), then:
 git remote add origin https://github.com/<you>/football-time-machine.git
 git push -u origin main
 ```
 
-`.gitignore` already excludes raw data, `node_modules`, `dist` and zips. The
-largest tracked file is the SQLite database (~30 MB), under GitHub's 100 MB limit.
+`.gitignore` excludes raw data, `node_modules`, `dist` and zips. The largest
+tracked file is the SQLite database (~30 MB), under GitHub's 100 MB limit.
 
-## 2. Host the live app on Hugging Face Spaces (recommended, free)
+## 2. Host the live app on Render (free, no credit card)
 
-1. Create an account at https://huggingface.co and click **New Space**.
-2. Name it `football-time-machine`, choose **Docker** as the SDK, **Blank** template, public, free CPU hardware.
-3. Push this repo to the Space (it is a git remote):
+Render's free web-service tier runs Docker containers with 512 MB RAM and
+750 instance-hours a month, enough for one always-available service.
 
-```bash
-git remote add hf https://huggingface.co/spaces/<you>/football-time-machine
-git push hf main
-```
+1. Sign up at https://render.com with your GitHub account.
+2. **New → Blueprint**, select the `football-time-machine` repo. Render reads
+   `render.yaml` and creates the service (or **New → Web Service**, runtime
+   **Docker**, plan **Free** — the Dockerfile does the rest).
+3. First build takes ~6–8 minutes (frontend build + Python deps). You get a URL
+   like `https://football-time-machine.onrender.com`.
 
-The Space builds the `Dockerfile` (frontend build + Python deps, ~5 minutes on
-first push) and serves on port 7860. Your app is live at
-`https://huggingface.co/spaces/<you>/football-time-machine` and can also be
-embedded or opened full-screen at `https://<you>-football-time-machine.hf.space`.
-
-Free Spaces sleep after 48 h without visitors and wake on the next request
-(cold start ~30 s). Add this to the top of `README.md` so the Space shows a
-proper card (Hugging Face reads it as front matter):
-
-```
----
-title: Football Time Machine
-emoji: ⚽
-colorFrom: green
-colorTo: gray
-sdk: docker
-app_port: 7860
-pinned: false
----
-```
+Free services spin down after 15 minutes without traffic and take ~30–60 s to
+wake on the next visit — normal for a portfolio link (mention it in your README
+or LinkedIn post so a reviewer waits for the first load). The Space-style
+front matter at the top of README.md is harmless on GitHub/Render.
 
 ## 3. Alternatives
 
-* **Render** (free web service, Docker): connect the GitHub repo, pick Docker,
-  set env `PORT=10000`. Free instances have 512 MB RAM — enough for this app but
-  close to the limit — and sleep after 15 minutes.
-* **Fly.io** / **Railway**: same Dockerfile; both offer small free/trial
-  allowances that change over time.
-* **Static-only preview** is not possible: the ML endpoints need the Python API.
+* **Koyeb** – free "nano" Docker instance (0.1 vCPU / 512 MB), no card, no sleep
+  on the free tier at the time of writing; deploy from GitHub with the Dockerfile.
+* **Hugging Face Spaces** – Docker Spaces now require a paid PRO plan; only
+  Static Spaces and ZeroGPU Gradio Spaces are free, so this app (FastAPI + React)
+  does not fit their free tier.
+* **Railway / Fly.io** – trial credits or card required.
+* **Static-only hosting (GitHub Pages, Netlify, Vercel)** is not enough on its
+  own: the ML endpoints need the Python API.
 
 ## Updating the data or models
 
 Run `python setup.py` locally, commit the changed files under `backend/data/`
-and push. The Space rebuilds automatically.
+and push. Render redeploys automatically on every push to `main`.
